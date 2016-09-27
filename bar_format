@@ -42,7 +42,7 @@ while read -r line ; do
 			# is alsa muted or not muted?
 			if [ "$volStatus" == "on" ]
 			then
-					snd="%{A:amixer sset Master toggle:}%{B$GREEN}%{F$BCOLOR} VOL:$volLevel %{F-}%{B-}%{A}"
+					snd="%{A:amixer sset Master toggle:}%{A4:amixer sset Master 5+:}%{A5:amixer sset Master 5-:}%{B$GREEN}%{F$BCOLOR} VOL:$volLevel %{F-}%{B-}%{A}%{A}%{A}"
 			else
 					# If it is muted, make the font red
 					snd="%{A:amixer sset Master toggle:}%{F$GREEN} VOL:$volLevel %{F-}%{A}"
