@@ -19,7 +19,7 @@ if [ -f $sysresources ]; then
 
 fi
 
-if [ -f $sysmodmap ]; then
+if [ -f $sysmodmap ]; then 
     xmodmap $sysmodmap
 fi
 
@@ -54,7 +54,8 @@ nitrogen --restore &
 sxhkd &
 redshift -l 60.2:24.6 &
 xsetroot -cursor_name left_ptr &
-/home/taate/scripts/bspwm_bar &
 xrdb ~/.Xresources
+/home/taate/scripts/bspwm_bar &
+amixer sset Master toggle &
 exec bspwm
 

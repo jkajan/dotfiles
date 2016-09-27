@@ -2,6 +2,10 @@
 
 . ~/scripts/bar_colors
 
+DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
+. "$DIR/bar_colors"
+
 while read -r line ; do 
 	case $line in
 		T*)

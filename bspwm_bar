@@ -5,8 +5,10 @@ BAR_FIFO=/tmp/bar-fifo
 BAR_FONT="GohuFont:size=8"
 BAR_WM_NAME=bspwm_bar
 export BAR_FIFO HEIGHT PANEL_FONT BAR_WM_NAME
-. ~/scripts/bar_colors
 
+DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
+. "$DIR/bar_colors"
 
 
 if xdo id -a "$PANEL_WM_NAME" > /dev/null ; then
@@ -57,9 +59,9 @@ bar_bat() {
 	if [ "$STAT" == "Charging," ]
 	then
 		echo "%{B$TEAL}%{F$BCOLOR} BAT:$BAT %{F-}%{B-}"
-	elif [ "$BAT" -lt 15 ]
+	elif [ "$BAT" -lt 25 ]
 	then
-		echo "%{F$RED} BAT:$BAT%{F-}"
+		echo "%{F$BCOLOR}%{B$RED} BAT:$BAT %{F-}%{B-}"
 	elif [ "$BAT" -lt 40 ]
 	then
 		echo "%{F$ORANGE} BAT:$BAT%{F-}"
@@ -72,7 +74,7 @@ bar_bat() {
 }
 
 bar_wifi() {
-		WIFI=$(iwconfig wlp3s0 | grep ESSID | cut -d ':' -f 2 ) #| sed 's/\"//g')
+		WIFI=$(iwconfig wlp3s0 | grep ESSID | cut -d ':' -f 2 | cut -d \" -f 2)
 		SIG=$(iwconfig wlp3s0 | grep Quality | cut -d '=' -f 2 | cut -d '/' -f 1)
 
 		if [ "$SIG" == "" ]
@@ -95,7 +97,7 @@ mkfifo "$BAR_FIFO"
 bspc config top_padding $HEIGHT
 bspc subscribe report > "$BAR_FIFO" & 
 xtitle -sf 'T%s' > "$BAR_FIFO" &
-~/scripts/bar_format < "$BAR_FIFO" | lemonbar -n "$BAR_WM_NAME" -p -g 1366x25 -F "$FCOLOR" -B "$BCOLOR" -f "$BAR_FONT" | sh &
+"$DIR/bar_format" < "$BAR_FIFO" | lemonbar -n "$BAR_WM_NAME" -p -g 1366x25 -F "$FCOLOR" -B "$BCOLOR" -f "$BAR_FONT" | sh &
 
 wid=$(xdo id -a "$PANEL_WM_NAME")
 tries_left=20
