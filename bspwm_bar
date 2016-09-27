@@ -95,9 +95,10 @@ bar_wifi() {
 mkfifo "$BAR_FIFO"
 
 bspc config top_padding $HEIGHT
-bspc subscribe report > "$BAR_FIFO" & 
+bspc subscribe report > "$BAR_FIFO" &
+stdbuf -oL alsactl monitor > "$BAR_FIFO" &
 xtitle -sf 'T%s' > "$BAR_FIFO" &
-"$DIR/bar_format" < "$BAR_FIFO" | lemonbar -n "$BAR_WM_NAME" -p -g 1366x25 -F "$FCOLOR" -B "$BCOLOR" -f "$BAR_FONT" | sh &
+"$DIR/bar_format" < "$BAR_FIFO" | lemonbar -n "$BAR_WM_NAME" -p -g 1366x25 -F "$FCOLOR" -B "$BCOLOR" -f "$BAR_FONT" | sh >> /home/taate/scripts/barlog &
 
 wid=$(xdo id -a "$PANEL_WM_NAME")
 tries_left=20
@@ -110,7 +111,7 @@ done
 
 while true; do
 	echo "N" "$(bar_wifi)" > "$BAR_FIFO"
-	echo "C" "$(bar_cpu)""$(bar_ram)""$(bar_volume)""$(bar_bat)"" $(date "+%d.%m %H:%M") " > "$BAR_FIFO"
+	echo "C" "$(bar_cpu)""$(bar_ram)""$(bar_bat)"" $(date "+%d.%m %H:%M") " > "$BAR_FIFO"
 	sleep 5s
 done &
 

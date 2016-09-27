@@ -1,10 +1,22 @@
 #!/bin/sh
 
-. ~/scripts/bar_colors
-
 DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
 . "$DIR/bar_colors"
+
+#set initial volume
+
+volStatus=$(amixer get Master | tail -n 1 | cut -d '[' -f 4 | sed 's/].*//g')
+volLevel=$(amixer get Master | tail -n 1 | cut -d '[' -f 2 | sed 's/%.*//g')
+
+# is alsa muted or not muted?
+if [ "$volStatus" == "on" ]
+then
+	snd="%{A:amixer sset Master toggle:}%{B$GREEN}%{F$BCOLOR} VOL:$volLevel %{F-}%{B-}%{A}"
+else
+	# If it is muted, make the font red
+	snd="%{A:amixer sset Master toggle:}%{F$GREEN} VOL:$volLevel %{F-}%{A}"
+fi
 
 while read -r line ; do 
 	case $line in
@@ -20,6 +32,21 @@ while read -r line ; do
 		N*)
 		    #wifi ssid
 			wifi="${line#?}"
+			;;
+		
+		c*)
+				#sound status
+					    
+			volStatus=$(amixer get Master | tail -n 1 | cut -d '[' -f 4 | sed 's/].*//g')
+			volLevel=$(amixer get Master | tail -n 1 | cut -d '[' -f 2 | sed 's/%.*//g')
+			# is alsa muted or not muted?
+			if [ "$volStatus" == "on" ]
+			then
+					snd="%{A:amixer sset Master toggle:}%{B$GREEN}%{F$BCOLOR} VOL:$volLevel %{F-}%{B-}%{A}"
+			else
+					# If it is muted, make the font red
+					snd="%{A:amixer sset Master toggle:}%{F$GREEN} VOL:$volLevel %{F-}%{A}"
+			fi
 			;;
 		W*)
 			# bspwm's state
@@ -74,5 +101,5 @@ while read -r line ; do
 			done
 			;;
 	esac
-	printf "%s\n" "%{l}${wm} ${wifi} %{c}${title} %{r} ${sys}"
+	printf "%s\n" "%{l}${wm} ${wifi} %{c}${title} %{r} ${snd}${sys}"
 done
