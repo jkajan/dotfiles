@@ -30,12 +30,12 @@ bar_cpu() {
 
 	if [ "$CPU" -lt 10 ]
 	then
-		echo "%{A:urxvt -e htop:}%{F$BLUE} CPU:$CPU %{F-}%{A}"
+		echo "%{A:urxvt -e htop &:}%{F$BLUE} CPU:$CPU %{F-}%{A}"
 	elif [ "$CPU" -lt 50 ]
 	then
-		echo "%{A:urxvt -e htop:}%{F$PURPLE} CPU:$CPU %{F-}%{A}"
+		echo "%{A:urxvt -e htop &:}%{F$PURPLE} CPU:$CPU %{F-}%{A}"
 	else
-		echo "%{A:urxvt -e htop:}%{B$PINK}%{F$BCOLOR} CPU:$CPU %{F-}%{B-}%{A}"
+		echo "%{A:urxvt -e htop &:}%{B$PINK}%{F$BCOLOR} CPU:$CPU %{F-}%{B-}%{A}"
 	fi
 }
 
@@ -45,18 +45,18 @@ bar_bat() {
 
 	if [ "$STAT" == "Charging," ]
 	then
-		echo "%{B$TEAL}%{F$BCOLOR} BAT:$BAT  %{F-}%{B-}"
+		echo "%{B$TEAL}%{F$BCOLOR} BAT:$BAT %{F-}%{B-}"
 	elif [ "$BAT" -lt 25 ]
 	then
-		echo "%{F$BCOLOR}%{B$RED} BAT:$BAT  %{F-}%{B-}"
+		echo "%{F$BCOLOR}%{B$RED} BAT:$BAT %{F-}%{B-}"
 	elif [ "$BAT" -lt 40 ]
 	then
-		echo "%{F$ORANGE} BAT:$BAT  %{F-}"
+		echo "%{F$ORANGE} BAT:$BAT %{F-}"
 	elif [ "$BAT" -lt 60 ]
 	then
-		echo "%{F$YELLOW} BAT:$BAT  %{F-}"
+		echo "%{F$YELLOW} BAT:$BAT %{F-}"
 	else
-		echo "%{F$GREEN} BAT:$BAT  %{F-}"
+		echo "%{F$GREEN} BAT:$BAT %{F-}"
 	fi
 }
 
@@ -98,7 +98,7 @@ done
 
 while true; do
 	echo "N" "$(bar_wifi)" > "$BAR_FIFO"
-	echo "C" "$(bar_cpu)""$(bar_ram)""$(bar_bat)""$(date "+%d.%m %H:%M")" > "$BAR_FIFO"
+	echo "C" "$(bar_cpu)""$(bar_ram)""$(bar_bat)"" ""$(date "+%d.%m %H:%M")" > "$BAR_FIFO"
 	sleep 5s
 done &
 
