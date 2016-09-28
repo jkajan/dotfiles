@@ -14,7 +14,7 @@ if [ "$volStatus" == "on" ]
 then
 	snd="%{A:amixer sset Master toggle:}%{B$GREEN}%{F$BCOLOR} VOL:$volLevel %{F-}%{B-}%{A}"
 else
-	# If it is muted, make the font red
+	# If it is muted, invert the colors
 	snd="%{A:amixer sset Master toggle:}%{F$GREEN} VOL:$volLevel %{F-}%{A}"
 fi
 
@@ -26,7 +26,7 @@ while read -r line ; do
 			;;
 		C*)
 			#clock and system
-			sys="%{F$FCOLOR}%{B$BCOLOR} ${line#?} %{B-}%{F-}"
+			sys="%{F$FCOLOR}%{B$BCOLOR}${line#?}%{B-}%{F-}"
 			;;
 
 		N*)
@@ -101,5 +101,5 @@ while read -r line ; do
 			done
 			;;
 	esac
-	printf "%s\n" "%{l}${wm} ${wifi} %{c}${title} %{r} ${snd}${sys}"
+	printf "%s\n" "%{l}${wm}${wifi}%{c}${title}%{r}${snd}${sys}"
 done
