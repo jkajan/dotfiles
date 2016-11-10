@@ -46,7 +46,7 @@ bspc config top_padding $HEIGHT
 bspc subscribe report > "$BAR_FIFO" &
 stdbuf -oL alsactl monitor > "$BAR_FIFO" &
 xtitle -sf 'T%s' > "$BAR_FIFO" &
-"$DIR/bar_format" < "$BAR_FIFO" | lemonbar -n "$BAR_WM_NAME" -p -g 1366x20 -F "$FCOLOR" -B "$BCOLOR" -f "$BAR_FONT" | sh >> /home/taate/scripts/barlog &
+"$DIR/bar_format" < "$BAR_FIFO" | lemonbar -n "$BAR_WM_NAME" -p -g 1920x20 -F "$FCOLOR" -B "$BCOLOR" -f "$BAR_FONT" | sh >> /home/taate/scripts/barlog &
 
 wid=$(xdo id -a "$PANEL_WM_NAME")
 tries_left=20
