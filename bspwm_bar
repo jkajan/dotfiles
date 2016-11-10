@@ -39,45 +39,6 @@ bar_cpu() {
 	fi
 }
 
-bar_bat() {
-	BAT=$(acpi | cut -d ' ' -f 4 | sed "s/[^0-9]//g")
-	STAT=$(acpi | cut -d ' ' -f 3)
-
-	if [ "$STAT" == "Charging," ]
-	then
-		echo "%{B$TEAL}%{F$BCOLOR} BAT:$BAT %{F-}%{B-}"
-	elif [ "$BAT" -lt 25 ]
-	then
-		echo "%{F$BCOLOR}%{B$RED} BAT:$BAT %{F-}%{B-}"
-	elif [ "$BAT" -lt 40 ]
-	then
-		echo "%{F$ORANGE} BAT:$BAT %{F-}"
-	elif [ "$BAT" -lt 60 ]
-	then
-		echo "%{F$YELLOW} BAT:$BAT %{F-}"
-	else
-		echo "%{F$GREEN} BAT:$BAT %{F-}"
-	fi
-}
-
-bar_wifi() {
-		WIFI=$(iwconfig wlp3s0 | grep ESSID | cut -d ':' -f 2 | cut -d \" -f 2)
-		SIG=$(iwconfig wlp3s0 | grep Quality | cut -d '=' -f 2 | cut -d '/' -f 1)
-
-		if [ "$SIG" == "" ]
-		then 
-				echo "%{B$YELLOW}%{F$BCOLOR} No wifi %{F-}%{B-}"
-		elif [ "$SIG" -lt 35 ]
-		then
-				echo "%{F$RED}$WIFI %{F-}"
-		elif [ "$SIG" -lt 60 ]
-		then
-				echo "%{F$ORANGE}$WIFI %{F-}"
-		else
-				echo "%{F$PURPLE}$WIFI %{F-}"
-		fi
-}
-
 [ -e "$BAR_FIFO" ] && rm "$BAR_FIFO"
 mkfifo "$BAR_FIFO"
 
@@ -97,8 +58,7 @@ done
 [ -n "$wid" ] && xdo above -t "$(xdo id -N Bspwm -n root | sort | head -n 1)" "$wid"
 
 while true; do
-	echo "N" "$(bar_wifi)" > "$BAR_FIFO"
-	echo "C" "$(bar_cpu)""$(bar_ram)""$(bar_bat)"" ""$(date "+%d.%m %H:%M")"" " > "$BAR_FIFO"
+	echo "C" "$(bar_cpu)""$(bar_ram)"" ""$(date "+%d.%m %H:%M")"" " > "$BAR_FIFO"
 	sleep 5s
 done &
 
