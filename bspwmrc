@@ -6,7 +6,7 @@ syncthing &
 polybar spacebar &
 telegram-desktop &
 redshift 63.09:21.61 &
-sxhkd -f 100 &
+sxhkd &
 
 bspc monitor -d 1 2 3 4 5 M T
 
