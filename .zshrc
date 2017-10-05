@@ -10,9 +10,18 @@ zstyle :compinstall filename '/home/taate/.zshrc'
 
 autoload -Uz compinit
 compinit
+
+autoload -Uz promptinit
+promptinit
 # End of lines added by compinstall
 #
 #BASE16_SHELL=$HOME/.config/base16-shell/
 #[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 alias ls='ls --color=auto'
+alias ..='cd ..'
+alias ll='ls -la'
+alias svim='sudo nvim'
+
+PROMPT='%F{green}%?%f %# '
+RPROMPT='%F{red}%/%f'
