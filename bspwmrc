@@ -1,0 +1,23 @@
+#! /bin/sh
+
+setxkbmap fi &
+nitrogen --restore &
+syncthing &
+polybar spacebar &
+telegram-desktop &
+redshift 63.09:21.61 &
+sxhkd -f 100 &
+
+bspc monitor -d 1 2 3 4 5 M T
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config focus_follows_pointer true
+bspc config auto_cancel true
+
+bspc rule -a TelegremDesktop desktop='^7'
+bspc rule -a 'Google Play Music Desktop Player' desktop='^6'
