@@ -52,7 +52,7 @@ highlight Object color: #d3d0c8;
 highlight Preview color: #515151;
 highlight PromptText color: #e8e6df; background: #1B2B34;
 highlight Question color: #ffffff; background: #222222; font-weight: bold;
-highlight StatusLine color: #ffffff; background: #000000; "font-size: 8pt;
+highlight StatusLine color: #afafaf; background: #222222; "font-size: 0.65empt;
 highlight String color: #222222; background: #afafaf;
 highlight TabNumber color: #4F5B66; font-weight: bold; margin: 0; padding-right: .3ex; text-shadow: #000 -1px 0 0, #000 0 1px 0, #000 1px 0 0, #000 0 -1px 0;
 highlight Tag color: #222222; background: #afafaf;

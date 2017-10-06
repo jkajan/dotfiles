@@ -10,7 +10,7 @@
 [colors]
 background = ${xrdb:background:#222}
 background-alt = #444
-foreground = ${xrdb:foreground:#222}
+foreground = ${xrdb:foreground:#fff}
 foreground-alt = #555
 primary = ${xrdb:orange:#222}
 secondary = ${xrdb:blue:#222}

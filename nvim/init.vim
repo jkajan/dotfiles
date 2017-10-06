@@ -11,5 +11,3 @@ set softtabstop=0 noexpandtab
 set number
 set t_Co=256
 set clipboard=unnamed
-autocmd InsertEnter * :set relativenumber
-autocmd InsertLeave * :set number
