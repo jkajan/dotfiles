@@ -26,15 +26,15 @@ teal:		base0C
 font:		Gohu GohuFont 11
 
 ! rofi options
-rofi.lines:			20
+rofi.lines:			10
 rofi.columns:			1
-rofi.font: GohuFont		11
+rofi.font: GohuFont		10
 rofi.color-enabled:		false
 rofi.bg:				base00
 rofi.fg:				base05
 rofi.hlbg:				base04
 rofi.hlfg:				base00
-rofi.padding:			200
+rofi.padding:			10
 rofi.bw:				0
 rofi.disable-history:	false
 rofi.separator-style:	none
