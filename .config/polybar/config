@@ -25,8 +25,8 @@ teal = ${xrdb:teal:#f00}
 
 
 [bar/spacebar]
-monitor = ${env:MONITOR:LVDS-1}
-width = 1342
+monitor = ${env:MONITOR:DVI-I-1}
+width = 1896
 height = 25
 offset-x = 12
 offset-y = 12
