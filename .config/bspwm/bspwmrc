@@ -13,11 +13,15 @@ bspc monitor -d 1 2 3 4 5 M T
 bspc config border_width         2
 bspc config window_gap          12
 
+bscp config active_border_color \#504945
+bspc config normal_border_color \#f2e5bc
+bspc config presel_feedback_color \#076678
+
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
 bspc config auto_cancel true
 
-bspc rule -a TelegremDesktop desktop='^7'
+bspc rule -a TelegramDesktop desktop='^7'
 bspc rule -a 'Google Play Music Desktop Player' desktop='^6'

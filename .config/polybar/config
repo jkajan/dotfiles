@@ -9,9 +9,9 @@
 
 [colors]
 background = ${xrdb:background:#222}
-background-alt = #444
+background-alt = ${xrdb:background-alt:#f00}
 foreground = ${xrdb:foreground:#fff}
-foreground-alt = #555
+foreground-alt = ${xrdb:foreground-alt:#f00}
 primary = ${xrdb:orange:#222}
 secondary = ${xrdb:blue:#222}
 red = ${xrdb:red:#f00}
@@ -26,10 +26,10 @@ teal = ${xrdb:teal:#f00}
 
 [bar/spacebar]
 monitor = ${env:MONITOR:LVDS-1}
-width = 1336
+width = 1342
 height = 25
-offset-x = 15
-offset-y = 15
+offset-x = 12
+offset-y = 12
 radius = 0
 fixed-center = false
 
@@ -48,7 +48,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-1 = Gohu GohuFont:pixelsize:10:size=14;1
+font-1 = Monaco:pixelsize:10:size=10;1
 font-0 = Wuncon Siji:pixelsize:10;1
 ;font-2 = tewi-medium-11:pixelsize:10;1
 ;font-0 = fixed:pixelsize=10;1
@@ -191,11 +191,10 @@ interval = 3.0
 format-connected = <ramp-signal> <label-connected>
 label-connected = %essid%
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+format-disconnected = <label-disconnected>
+#format-disconnected-underline = ${self.format-connected-underline}
+#label-disconnected = %ifname% disconnected
+#label-disconnected-foreground = ${colors.foreground-alt}
 
 ramp-signal-0 = 
 ramp-signal-1 = 
@@ -214,8 +213,7 @@ format-connected-prefix = "l "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
+format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
