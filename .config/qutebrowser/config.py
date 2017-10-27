@@ -262,5 +262,6 @@ c.colors.tabs.selected.even.fg = base0B
 c.colors.tabs.selected.even.bg = base00
 #Background color of selected even tabs.
 
-c.colors.webpage.bg = base05
+c.colors.webpage.bg = base00
 #Background color for webpages if unset (or empty to use the theme's color)
+
