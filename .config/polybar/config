@@ -26,7 +26,7 @@ teal = ${xrdb:teal:#f00}
 
 [bar/spacebar]
 monitor = ${env:MONITOR:DVI-I-1}
-width = 1920
+width = 100%
 height = 25
 offset-x = 0
 offset-y = 0
