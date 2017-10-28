@@ -26,10 +26,10 @@ teal = ${xrdb:teal:#f00}
 
 [bar/spacebar]
 monitor = ${env:MONITOR:DVI-I-1}
-width = 1896
+width = 1920
 height = 25
-offset-x = 12
-offset-y = 12
+offset-x = 0
+offset-y = 0
 radius = 0
 fixed-center = false
 
@@ -40,7 +40,7 @@ line-size = 2
 line-color = #0f0
 
 border-size = 2
-border-color = ${colors.foreground}
+border-color = ${colors.background}
 
 padding-left = 0
 padding-right = 2

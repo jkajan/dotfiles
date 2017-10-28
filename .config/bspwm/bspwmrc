@@ -25,3 +25,4 @@ bspc config auto_cancel true
 
 bspc rule -a TelegramDesktop desktop='^7'
 bspc rule -a 'Google Play Music Desktop Player' desktop='^6'
+bspc rule -a Vlc 
