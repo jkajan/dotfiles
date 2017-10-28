@@ -6,10 +6,35 @@
 # Uncomment this to still load settings configured via autoconfig.yml
 # config.load_autoconfig()
 
-# Font used in the completion widget.
-# Type: Font
+#Set most of the fonts to 10pt Monaco
 c.fonts.completion.entry = '10pt Monaco'
+c.fonts.completion.category = '10pt Monaco'
+c.fonts.downloads = '10pt Monaco'
+c.fonts.hints = '10pt Monaco'
+c.fonts.keyhint = '10pt Monaco'
+c.fonts.messages.error = '10pt Monaco'
+c.fonts.messages.info = '10pt Monaco'
+c.fonts.messages.warning = '10pt Monaco'
+c.fonts.prompts = '10pt Monaco'
+c.fonts.tabs = '10pt Monaco'
+c.fonts.statusbar = '10pt Monaco'
 
+c.fonts.web.family.standard = 'Monaco'
+
+#Padding around text for tabs
+c.tabs.padding = {"top": 5, "bottom": 5, "left": 5, "right": 5}
+
+#Width of the progress indicator (0 to disable).
+c.tabs.width.indicator = 0
+
+#Open new tabs (middleclick/ctrl+click) in the background
+c.tabs.background = True
+
+#Scaling for favicons in the tab bar
+c.tabs.favicons.scale = 1.2
+
+#The format to use for the tab title.
+c.tabs.title.format = '{title}'
 # Default monospace fonts. Whenever "monospace" is used in a font
 # setting, it's replaced with the fonts listed here.
 # Type: Font
@@ -223,13 +248,13 @@ c.colors.statusbar.url.success.https.fg = base0B
 c.colors.statusbar.url.warn.fg = base0A
 #Foreground color of the URL in the statusbar when there's a warning.
 
-c.colors.tabs.bar.bg = base00
+c.colors.tabs.bar.bg = base05
 #Background color of the tab bar.
 
-c.colors.tabs.indicator.start = '#0000aa'
+c.colors.tabs.indicator.start = base08
 #Color gradient start for the tab indicator.
 
-c.colors.tabs.indicator.stop = '#00aa00'
+c.colors.tabs.indicator.stop = base0B
 #Color gradient end for the tab indicator.
 
 c.colors.tabs.indicator.error = base08
@@ -247,16 +272,16 @@ c.colors.tabs.odd.bg = base03
 c.colors.tabs.even.fg = base05
 #Foreground color of unselected even tabs.
 
-c.colors.tabs.even.bg = base00
+c.colors.tabs.even.bg = base03
 #Background color of unselected even tabs.
 
-c.colors.tabs.selected.odd.fg = base0B
+c.colors.tabs.selected.odd.fg = base05
 #Foreground color of selected odd tabs.
 
 c.colors.tabs.selected.odd.bg = base00
 #Background color of selected odd tabs.
 
-c.colors.tabs.selected.even.fg = base0B
+c.colors.tabs.selected.even.fg = base05
 #Foreground color of selected even tabs.
 
 c.colors.tabs.selected.even.bg = base00

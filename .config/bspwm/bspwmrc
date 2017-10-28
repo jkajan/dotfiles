@@ -4,7 +4,7 @@ setxkbmap fi &
 nitrogen --restore &
 syncthing &
 polybar spacebar &
-telegram-desktop &
+st nctelegram  &
 redshift 63.09:21.61 &
 sxhkd &
 
@@ -25,4 +25,4 @@ bspc config auto_cancel true
 
 bspc rule -a TelegramDesktop desktop='^7'
 bspc rule -a 'Google Play Music Desktop Player' desktop='^6'
-bspc rule -a Vlc 
+bspc rule -a Vlc flag='sticky' state='pseudo_tiled'
