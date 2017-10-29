@@ -73,13 +73,13 @@ c.colors.completion.category.fg = base05
 c.colors.completion.category.bg = base02
 #Background color of the completion widget category headers.
 
-c.colors.completion.category.border.top = base03
+c.colors.completion.category.border.top = base02
 #Top border color of the completion widget category headers.
 
-c.colors.completion.category.border.bottom = base03
+c.colors.completion.category.border.bottom = base02
 #Bottom border color of the completion widget category headers.
 
-c.colors.statusbar.insert.fg = base05
+c.colors.statusbar.insert.fg = base00
 #Foreground color of the statusbar in insert mode.
 
 c.colors.statusbar.insert.bg = base0C
@@ -140,13 +140,13 @@ c.colors.hints.bg = base00
 #Background color for hints.
 #Note that you can use a `rgba(...)` value for transparency.
 
-c.colors.hints.match.fg = base0B
+c.colors.hints.match.fg = base09
 #Font color for the matched part of hints.
 
 c.colors.keyhint.fg = base08
 #Text color for the keyhint widget.
 
-c.colors.keyhint.suffix.fg = base0B
+c.colors.keyhint.suffix.fg = base09
 #Highlight color for keys to complete the current keychain.
 
 c.colors.keyhint.bg = 'rgba(0, 0, 0, 80%)'
@@ -170,25 +170,25 @@ c.colors.messages.warning.bg = base09
 c.colors.messages.warning.border = base09
 #Border color of a warning message.
 
-c.colors.messages.info.fg = base05
+c.colors.messages.info.fg = base00
 #Foreground color an info message.
 
-c.colors.messages.info.bg = base00
+c.colors.messages.info.bg = base0D
 #Background color of an info message.
 
-c.colors.messages.info.border = base00
+c.colors.messages.info.border = base0D
 #Border color of an info message.
 
-c.colors.prompts.fg = base05
+c.colors.prompts.fg = base00
 #Foreground color for prompts.
 
-c.colors.prompts.border = '1px base05'
+c.colors.prompts.border = '1px base0E'
 #Border used around UI elements in prompts.
 
-c.colors.prompts.bg = '#444444'
+c.colors.prompts.bg = base0E
 #Background color for prompts.
 
-c.colors.prompts.selected.bg = 'grey'
+c.colors.prompts.selected.bg = base05
 #Background color for the selected item in filename prompts.
 
 c.colors.statusbar.normal.fg = base05
@@ -197,10 +197,10 @@ c.colors.statusbar.normal.fg = base05
 c.colors.statusbar.normal.bg = base00
 #Background color of the statusbar.
 
-c.colors.statusbar.private.fg = base05
+c.colors.statusbar.private.fg = base00
 #Foreground color of the statusbar in private browsing mode.
 
-c.colors.statusbar.private.bg = '#666666'
+c.colors.statusbar.private.bg = base05
 #Background color of the statusbar in private browsing mode.
 
 c.colors.statusbar.command.fg = base05
@@ -209,10 +209,10 @@ c.colors.statusbar.command.fg = base05
 c.colors.statusbar.command.bg = base00
 #Background color of the statusbar in command mode.
 
-c.colors.statusbar.command.private.fg = base05
+c.colors.statusbar.command.private.fg = base00
 #Foreground color of the statusbar in private browsing + command mode.
 
-c.colors.statusbar.command.private.bg = base03
+c.colors.statusbar.command.private.bg = base05
 #Background color of the statusbar in private browsing + command mode.
 
 c.colors.statusbar.caret.fg = base05
@@ -242,10 +242,10 @@ c.colors.statusbar.url.hover.fg = base0C
 c.colors.statusbar.url.success.http.fg = base05
 #Foreground color of the URL in the statusbar on successful load (http).
 
-c.colors.statusbar.url.success.https.fg = base0B
+c.colors.statusbar.url.success.https.fg = base0A
 #Foreground color of the URL in the statusbar on successful load (https).
 
-c.colors.statusbar.url.warn.fg = base0A
+c.colors.statusbar.url.warn.fg = base09
 #Foreground color of the URL in the statusbar when there's a warning.
 
 c.colors.tabs.bar.bg = base05
