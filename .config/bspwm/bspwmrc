@@ -1,8 +1,10 @@
 #! /bin/sh
 
 setxkbmap fi &
+xsetroot -cursor_name left_ptr &
 nitrogen --restore &
 syncthing &
+light-locker &
 polybar spacebar &
 st nctelegram  &
 redshift 63.09:21.61 &
