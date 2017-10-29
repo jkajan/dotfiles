@@ -112,7 +112,7 @@ label-focused-background = ${colors.background-alt}
 label-focused-padding = 1
 label-focused = %icon%
 
-label-occupied-padding = 1
+label-occupied-padding = 1 
 label-occupied = %icon%
 
 label-urgent-background = ${colors.alert}
@@ -123,14 +123,16 @@ label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 1
 
 enable-scroll = false
-ws-icon-0 = 1;I
-ws-icon-1 = 2;II
-ws-icon-2 = 3;III
-ws-icon-3 = 4;IV
-ws-icon-4 = 5;V
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
 ws-icon-5 = M;
 ws-icon-6 = T;
+ws-icon-7 = S;
 ws-icon-default = #
+
 
 
 [module/mpd]
