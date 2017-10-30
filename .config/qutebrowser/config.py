@@ -106,7 +106,7 @@ c.colors.completion.scrollbar.fg = base05
 c.colors.completion.scrollbar.bg = base00
 #Color of the scrollbar in completion view
 
-c.colors.downloads.bar.bg = base00
+c.colors.downloads.bar.bg = base01
 #Background color for the download bar.
 
 c.colors.downloads.start.fg = base05
@@ -194,7 +194,7 @@ c.colors.prompts.selected.bg = base05
 c.colors.statusbar.normal.fg = base05
 #Foreground color of the statusbar.
 
-c.colors.statusbar.normal.bg = base00
+c.colors.statusbar.normal.bg = base01
 #Background color of the statusbar.
 
 c.colors.statusbar.private.fg = base00
@@ -206,7 +206,7 @@ c.colors.statusbar.private.bg = base05
 c.colors.statusbar.command.fg = base05
 #Foreground color of the statusbar in command mode.
 
-c.colors.statusbar.command.bg = base00
+c.colors.statusbar.command.bg = base01
 #Background color of the statusbar in command mode.
 
 c.colors.statusbar.command.private.fg = base00
@@ -278,13 +278,13 @@ c.colors.tabs.even.bg = base03
 c.colors.tabs.selected.odd.fg = base05
 #Foreground color of selected odd tabs.
 
-c.colors.tabs.selected.odd.bg = base00
+c.colors.tabs.selected.odd.bg = base01
 #Background color of selected odd tabs.
 
 c.colors.tabs.selected.even.fg = base05
 #Foreground color of selected even tabs.
 
-c.colors.tabs.selected.even.bg = base00
+c.colors.tabs.selected.even.bg = base01
 #Background color of selected even tabs.
 
 c.colors.webpage.bg = base00
