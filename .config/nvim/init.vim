@@ -5,6 +5,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'valloric/youcompleteme'
 call plug#end()
 
+au BufRead /tmp/neomutt-* set tw=72
+
 set termguicolors
 syntax on
 set tabstop=4
