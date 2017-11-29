@@ -6,12 +6,13 @@ nitrogen --restore &
 syncthing &
 light-locker &
 telegram-desktop &
+st -c "Neomutt" neomutt &
 polybar spacebar &
 redshift 63.09:21.61 &
 steam-native &
 sxhkd &
 
-bspc monitor -d 1 2 3 4 5 M T S
+bspc monitor -d 1 2 3 4 5 M T N S
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -19,8 +20,6 @@ bspc config top_padding			25
 bspc config borderless_monocle 	true
 bspc config paddingless_monocle false
 bspc config single_monocle		true
-bspc config honor_size_hints	true
-
 
 bspc config normal_border_color \#f2e5bc
 bspc config presel_feedback_color \#d5c4a1
@@ -35,4 +34,6 @@ bspc config auto_cancel true
 bspc rule -a TelegramDesktop desktop='^7'
 bspc rule -a 'Google Play Music Desktop Player' desktop='^6'
 bspc rule -a Vlc sticky=on state='pseudo_tiled'
-bspc rule -a 'Steam' desktop='^8'
+bspc rule -a 'Neomutt' desktop='^8'
+bspc rule -a 'Steam' desktop='^9'
+

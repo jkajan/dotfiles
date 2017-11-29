@@ -16,11 +16,11 @@ super + BackSpace
 
 
 # activate light-locker
-super + Escape
-	light-locker-command -l
-# make sxhkd reload its configuration files:
 #super + Escape
-#	pkill -USR1 -x sxhkd
+#	light-locker-command -l
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
 
 XF86AudioMute
 		amixer sset Master toggle
@@ -89,8 +89,7 @@ super + bracket{left,right}
 
 # focus the next occupied/empty desktop
 super + Tab
-	bspc desktop -f {next.occupied}
-
+	bspc query -D -d next.occupied && bspc desktop -f
 super + Tab + shift
     bspc desktop -f next.!occupied
 
