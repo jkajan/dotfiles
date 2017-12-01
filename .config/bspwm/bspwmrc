@@ -10,12 +10,13 @@ st -c "Neomutt" neomutt &
 polybar spacebar &
 redshift 63.09:21.61 &
 steam-native &
+gpmdp &
 sxhkd &
 
 bspc monitor -d 1 2 3 4 5 M T N S
 
 bspc config border_width         2
-bspc config window_gap          12
+bspc config window_gap          20
 bspc config top_padding			25
 bspc config borderless_monocle 	true
 bspc config paddingless_monocle false
