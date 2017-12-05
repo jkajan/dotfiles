@@ -6,7 +6,7 @@ nitrogen --restore &
 syncthing &
 light-locker &
 telegram-desktop &
-st -c "Neomutt" neomutt &
+st -c "Mutt" mutt &
 polybar spacebar &
 redshift 63.09:21.61 &
 steam-native &
@@ -34,6 +34,6 @@ bspc config auto_cancel true
 bspc rule -a TelegramDesktop desktop='^7'
 bspc rule -a 'Google Play Music Desktop Player' desktop='^6'
 bspc rule -a Vlc sticky=on state='pseudo_tiled'
-bspc rule -a 'Neomutt' desktop='^8'
+bspc rule -a 'Mutt' desktop='^8'
 bspc rule -a 'Steam' desktop='^9'
 
