@@ -24,9 +24,6 @@ c.fonts.web.family.standard = 'Monaco'
 #Padding around text for tabs
 c.tabs.padding = {"top": 5, "bottom": 5, "left": 5, "right": 5}
 
-#Width of the progress indicator (0 to disable).
-c.tabs.width.indicator = 0
-
 #Open new tabs (middleclick/ctrl+click) in the background
 c.tabs.background = True
 
