@@ -8,8 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show run
-
+	rofi -config '/home/taate/github/dotfiles/.local/share/rofi/themes/base16-gruvbox-light-soft.rasi' -show run -sidebar-mode
 # qutebrowser
 super + BackSpace
 	qutebrowser
