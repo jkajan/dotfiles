@@ -14,7 +14,7 @@ set number
 set clipboard=unnamed
 set statusline=%{fugitive#statusline()}
 
-colorscheme base16-gruvbox-light-soft
+colorscheme base16-mocha
 
 map <C-J> <C-W>j
 map <C-K> <C-W>k
