@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Gohu GohuFont:pixelsize=14:autohint=true";
-static int borderpx = 2;
+static int borderpx = 10;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -132,8 +132,8 @@ static const char *colorname[] = {
 * foreground, background, cursor, reverse
 * cursor
 */
-static unsigned int defaultfg = 12;
-static unsigned int defaultbg = 8;
+unsigned int defaultfg = 12;
+unsigned int defaultbg = 8;
 static unsigned int defaultcs = 14;
 static unsigned int defaultrcs = 15;
 
