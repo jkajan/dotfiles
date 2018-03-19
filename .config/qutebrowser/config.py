@@ -7,19 +7,21 @@
 # config.load_autoconfig()
 
 #Set most of the fonts to 10pt Monaco
-c.fonts.completion.entry = '10pt Monaco'
-c.fonts.completion.category = '10pt Monaco'
-c.fonts.downloads = '10pt Monaco'
-c.fonts.hints = '10pt Monaco'
-c.fonts.keyhint = '10pt Monaco'
-c.fonts.messages.error = '10pt Monaco'
-c.fonts.messages.info = '10pt Monaco'
-c.fonts.messages.warning = '10pt Monaco'
-c.fonts.prompts = '10pt Monaco'
-c.fonts.tabs = '10pt Monaco'
-c.fonts.statusbar = '10pt Monaco'
 
-c.fonts.web.family.standard = 'Monaco'
+currentFont = '14pt Gohu GohuFont'
+c.fonts.completion.entry = currentFont
+c.fonts.completion.category = currentFont
+c.fonts.downloads = currentFont
+c.fonts.hints = currentFont
+c.fonts.keyhint = currentFont
+c.fonts.messages.error = currentFont
+c.fonts.messages.info = currentFont
+c.fonts.messages.warning = currentFont
+c.fonts.prompts = currentFont
+c.fonts.tabs = currentFont
+c.fonts.statusbar = currentFont
+
+c.fonts.web.family.standard = 'Gohu GohuFont'
 
 #Padding around text for tabs
 c.tabs.padding = {"top": 5, "bottom": 5, "left": 5, "right": 5}
@@ -35,24 +37,24 @@ c.tabs.title.format = '{title}'
 # Default monospace fonts. Whenever "monospace" is used in a font
 # setting, it's replaced with the fonts listed here.
 # Type: Font
-c.fonts.monospace = '"Monaco","xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
+c.fonts.monospace = '"Gohu GohuFont","xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
 
-base00 = '#f2e5bc'
-base01 = '#ebdbb2'
-base02 = '#d5c4a1'
-base03 = '#bdae93'
-base04 = '#665c54'
-base05 = '#504945'
-base06 = '#3c3836'
-base07 = '#282828'
-base08 = '#9d0006'
-base09 = '#af3a03'
-base0A = '#b57614'
-base0B = '#79740e'
-base0C = '#427b58'
-base0D = '#076678'
-base0E = '#8f3f71'
-base0F = '#d65d0e'
+base00 = '#3b3228'
+base01 = '#534636'
+base02 = '#645240'
+base03 = '#7e705a'
+base04 = '#b8afad'
+base05 = '#d0c8c6'
+base06 = '#e9e1dd'
+base07 = '#f5eeeb'
+base08 = '#cb6077'
+base09 = '#d28b71'
+base0A = '#f4bc87'
+base0B = '#beb55b'
+base0C = '#7bbda4'
+base0D = '#8ab3b5'
+base0E = '#a89bb9'
+base0F = '#bb9584'
 
 
 c.colors.completion.fg = base05

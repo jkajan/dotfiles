@@ -1,5 +1,5 @@
 /**
- * Base16 Gruvbox light, soft ROFI Color theme
+ * Base16 Gruvbox light, hard ROFI Color theme
  * User: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
  * Copyright: Andrea Scarpino
  */
@@ -17,7 +17,7 @@
     lightbg:                     rgba ( 235, 219, 178, 100 % );
     selected-active-foreground:  @background;
     alternate-active-background: @lightbg;
-    background:                  rgba ( 242, 229, 188, 100 % );
+    background:                  rgba ( 249, 245, 215, 100 % );
     alternate-normal-foreground: @foreground;
     normal-background:           @background;
     lightfg:                     rgba ( 60, 56, 54, 100 % );
@@ -28,7 +28,7 @@
     urgent-background:           @background;
     selected-urgent-background:  @red;
     alternate-urgent-foreground: @red;
-    background-color:            rgba ( 242, 229, 188, 0 % );
+    background-color:            rgba ( 249, 245, 215, 0 % );
     alternate-active-foreground: @blue;
     active-background:           @background;
     selected-active-background:  @blue;
