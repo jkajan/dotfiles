@@ -68,11 +68,7 @@ font:		Monaco 12
 ! rofi options
 rofi.lines:				10
 rofi.columns:			1
-rofi.font: Monaco		10
-rofi.color-normal:		base00
-rofi.color-active:		base00
-rofi.color-window:		base00
-rofi.color-urgent:		base0D
+rofi.font: Gohu GohuFont 10
 rofi.padding:			12
 rofi.bw:				0
 rofi.disable-history:	false
