@@ -3,7 +3,6 @@
 setxkbmap fi &
 xsetroot -cursor_name left_ptr &
 nitrogen --restore &
-syncthing &
 telegram-desktop &
 st -c "Mutt" mutt &
 polybar spacebar &
