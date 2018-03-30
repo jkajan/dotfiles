@@ -7,7 +7,6 @@ telegram-desktop &
 st -c "Mutt" mutt &
 polybar spacebar &
 redshift 63.09:21.61 &
-steam-native &
 sxhkd &
 
 bspc monitor -d 1 2 3 4 5 T N S
