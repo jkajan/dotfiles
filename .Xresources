@@ -64,13 +64,3 @@ orange:		base09
 purple:		base0E
 teal:		base0C
 font:		Monaco 12
-
-! rofi options
-rofi.lines:				10
-rofi.columns:			1
-rofi.font: Gohu GohuFont 10
-rofi.padding:			12
-rofi.bw:				0
-rofi.disable-history:	false
-rofi.terminal:			st
-rofi.fullscreen: 		true
