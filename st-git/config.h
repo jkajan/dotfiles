@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Gohu GohuFont:pixelsize=14:autohint=true";
+static char *font = " t cherry:pixelsize=13:autohint=true";
 static int borderpx = 30;
 
 /*

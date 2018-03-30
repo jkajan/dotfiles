@@ -8,7 +8,7 @@
 
 #Set most of the fonts to 10pt Monaco
 
-currentFont = '14pt Gohu GohuFont'
+currentFont = '13pt t cherry'
 c.fonts.completion.entry = currentFont
 c.fonts.completion.category = currentFont
 c.fonts.downloads = currentFont
@@ -21,7 +21,7 @@ c.fonts.prompts = currentFont
 c.fonts.tabs = currentFont
 c.fonts.statusbar = currentFont
 
-c.fonts.web.family.standard = 'Gohu GohuFont'
+c.fonts.web.family.standard = ' t cherry'
 
 #Padding around text for tabs
 c.tabs.padding = {"top": 5, "bottom": 5, "left": 5, "right": 5}
@@ -32,12 +32,15 @@ c.tabs.background = True
 #Scaling for favicons in the tab bar
 c.tabs.favicons.scale = 1.2
 
+#Disable favicons
+c.tabs.favicons.show = False
+
 #The format to use for the tab title.
 c.tabs.title.format = '{title}'
 # Default monospace fonts. Whenever "monospace" is used in a font
 # setting, it's replaced with the fonts listed here.
 # Type: Font
-c.fonts.monospace = '"Gohu GohuFont","xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
+c.fonts.monospace = '" t cherry","Gohu GohuFont","xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
 
 base00 = '#3b3228'
 base01 = '#534636'
