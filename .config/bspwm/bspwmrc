@@ -7,6 +7,7 @@ telegram-desktop &
 st -c "Mutt" mutt &
 polybar spacebar &
 redshift 63.09:21.61 &
+steam-native &
 sxhkd &
 
 bspc monitor -d 1 2 3 4 5 T N S
@@ -14,7 +15,7 @@ bspc monitor -d 1 2 3 4 5 T N S
 bspc config border_width         2
 bspc config window_gap          20
 bspc config top_padding			25
-bspc config borderless_monocle 	true
+bspc config borderless_monocle 	false
 bspc config paddingless_monocle false
 bspc config single_monocle		true
 
@@ -29,7 +30,7 @@ bspc config focus_follows_pointer true
 bspc config auto_cancel true
 
 bspc rule -a TelegramDesktop desktop='^6'
-bspc rule -a Vlc sticky=on state='pseudo_tiled'
+bspc rule -a vlc sticky=on state='pseudo_tiled'
 bspc rule -a 'Mutt' desktop='^7'
 bspc rule -a 'Steam' desktop='^8'
 

@@ -108,13 +108,13 @@ c.colors.completion.scrollbar.bg = base00
 c.colors.downloads.bar.bg = base01
 #Background color for the download bar.
 
-c.colors.downloads.start.fg = base05
+c.colors.downloads.start.fg = base00
 #Color gradient start for download text.
 
 c.colors.downloads.start.bg = base0D
 #Color gradient start for download backgrounds.
 
-c.colors.downloads.stop.fg = base05
+c.colors.downloads.stop.fg = base00
 #Color gradient end for download text.
 
 c.colors.downloads.stop.bg = base0B
@@ -286,7 +286,7 @@ c.colors.tabs.selected.even.fg = base05
 c.colors.tabs.selected.even.bg = base01
 #Background color of selected even tabs.
 
-c.colors.webpage.bg = base00
+#c.colors.webpage.bg = base00
 #Background color for webpages if unset (or empty to use the theme's color)
 
 c.downloads.location.directory = "/home/taate/downloads"
