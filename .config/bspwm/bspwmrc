@@ -1,6 +1,5 @@
 #! /bin/sh
 
-setxkbmap fi &
 xsetroot -cursor_name left_ptr &
 nitrogen --restore &
 telegram-desktop &
