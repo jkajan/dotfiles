@@ -22,7 +22,6 @@ alias ls='ls --color=auto'
 alias ..='cd ..'
 alias ll='ls -la'
 alias svim='sudo nvim'
-alias mbsync='mbsync -aV'
 
 PROMPT='%F{green}%?%f %# '
 RPROMPT='%F{red}%/%f'

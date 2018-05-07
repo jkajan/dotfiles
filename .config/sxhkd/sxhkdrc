@@ -88,7 +88,7 @@ super + bracket{left,right}
 
 # focus the next occupied/empty desktop
 super + Tab
-	bspc query -D -d next.occupied && bspc desktop -f
+	bspc desktop -f next.occupied
 super + Tab + shift
     bspc desktop -f next.!occupied
 
