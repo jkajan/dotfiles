@@ -2,15 +2,14 @@
 
 . "${HOME}/.cache/wal/colors.sh"
 
-bspc config normal_border_color "$color1"
-bspc config active_border_color "$color2"
+bspc config normal_border_color "$color0"
+bspc config active_border_color "$color1"
 bspc config focused_border_color "$color15"
 bspc config presel_border_color "$color1"
 
+wal --theme random -o /home/taate/github/dotfiles/.config/wal/postwal.sh
 xsetroot -cursor_name left_ptr &
-nitrogen --restore &
 telegram-desktop &
-st -c "Mutt" mutt &
 polybar spacebar &
 redshift 63.09:21.61 &
 sxhkd &
