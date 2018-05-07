@@ -1,11 +1,10 @@
 call plug#begin('~/.vim/plugged')
-Plug 'chriskempson/base16-vim'
+Plug 'dylanaraps/wal.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'valloric/youcompleteme'
 call plug#end()
 
-set termguicolors
 syntax on
 set tabstop=4
 set shiftwidth=4
