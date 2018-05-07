@@ -9,19 +9,19 @@
 
 [colors]
 background = ${xrdb:background:#222}
-background-alt = ${xrdb:background-alt:#f00}
+background-alt = ${xrdb:color1:#f00}
 foreground = ${xrdb:foreground:#fff}
-foreground-alt = ${xrdb:foreground-alt:#f00}
-primary = ${xrdb:orange:#222}
-secondary = ${xrdb:blue:#222}
-red = ${xrdb:red:#f00}
-blue = ${xrdb:blue:#222}
-alert = ${xrdb:red:#222}
-yellow = ${xrdb:yellow:#f00}
-green = ${xrdb:green:#f00}
-purple = ${xrdb:purple:#f00}
-orange = ${xrdb:orange:#f00}
-teal = ${xrdb:teal:#f00}
+foreground-alt = ${xrdb:color4:#f00}
+primary = ${xrdb:color9:#222}
+secondary = ${xrdb:color13:#222}
+red = ${xrdb:color8:#f00}
+blue = ${xrdb:color13:#222}
+alert = ${xrdb:color8:#222}
+yellow = ${xrdb:color10:#f00}
+green = ${xrdb:color11:#f00}
+purple = ${xrdb:color14:#f00}
+orange = ${xrdb:color9:#f00}
+teal = ${xrdb:color12:#f00}
 
 
 [bar/spacebar]
