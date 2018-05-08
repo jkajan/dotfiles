@@ -13,6 +13,9 @@ super + @space
 super + BackSpace
 	qutebrowser
 
+# change colorscheme with wal
+super + Home
+	wal --theme random -o /home/taate/github/dotfiles/.config/wal/postwal.sh
 
 # activate light-locker
 #super + Escape
