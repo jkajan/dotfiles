@@ -114,10 +114,6 @@ static unsigned int cursorshape = 4;
 * foreground, background, cursor, reverse
 * cursor
 */
-unsigned int defaultfg = 12;
-unsigned int defaultbg = 8;
-static unsigned int defaultcs = 14;
-static unsigned int defaultrcs = 15;
 
 static unsigned int cols = 80;
 static unsigned int rows = 24;
