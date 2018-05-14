@@ -1,4 +1,3 @@
-#
 # wm independent hotkeys
 #
 
@@ -15,7 +14,7 @@ super + BackSpace
 
 # change colorscheme with wal
 super + Home
-	wal --theme random -o /home/taate/github/dotfiles/.config/wal/postwal.sh
+	wal --theme random -o $HOME/github/dotfiles/.config/wal/postwal.sh -g
 
 # activate light-locker
 #super + Escape

@@ -22,6 +22,7 @@ alias ls='ls --color=auto'
 alias ..='cd ..'
 alias ll='ls -la'
 alias svim='sudo nvim'
+alias changecolors='wal --theme random -o $HOME/github/dotfiles/.config/wal/postwal.sh -g'
 
 PROMPT='%F{green}%?%f %# '
 RPROMPT='%F{red}%/%f'
