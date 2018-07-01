@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Setting background"
-xsetroot -solid $(cat /home/taate/.cache/wal/colors | head -1)
+xsetroot -solid $(cat $HOME/.cache/wal/colors | head -1)
 
 . "${HOME}/.cache/wal/colors.sh"
 

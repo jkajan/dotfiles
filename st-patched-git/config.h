@@ -108,7 +108,7 @@ static unsigned int cursorshape = 4;
 *
 */
 
-#include "/home/taate/.cache/wal/colors-wal-st.h"
+#include "$HOME/.cache/wal/colors-wal-st.h"
 /*
 * Default colors (colorname index)
 * foreground, background, cursor, reverse
