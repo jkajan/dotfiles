@@ -6,7 +6,7 @@ setopt autocd
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/taate/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -22,7 +22,7 @@ alias ls='ls --color=auto'
 alias ..='cd ..'
 alias ll='ls -la'
 alias svim='sudo nvim'
-alias changecolors='wal --theme random -o $HOME/github/dotfiles/.config/wal/postwal.sh -g'
+alias changecolors='wal --theme random -o $HOME/git/dotfiles/.config/wal/postwal.sh -g'
 
 PROMPT='%F{green}%?%f %# '
 RPROMPT='%F{red}%/%f'
