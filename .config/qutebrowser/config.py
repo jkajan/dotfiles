@@ -49,7 +49,7 @@ c.tabs.background = True
 c.tabs.favicons.scale = 1.2
 
 #Disable favicons
-c.tabs.favicons.show = False
+c.tabs.favicons.show = "never"
 
 #The format to use for the tab title.
 c.tabs.title.format = '{title}'
@@ -58,5 +58,5 @@ c.tabs.title.format = '{title}'
 # Type: Font
 c.fonts.monospace = '" t cherry","Gohu GohuFont","xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
 
-c.downloads.location.directory = "/home/taate/downloads"
+c.downloads.location.directory = "$HOME/downloads"
 c.downloads.location.prompt = False
