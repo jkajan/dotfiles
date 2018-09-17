@@ -16,6 +16,12 @@ super + BackSpace
 super + Home
 	wal --theme random -o $HOME/github/dotfiles/.config/wal/postwal.sh -g
 
+super + o
+	sudo $HOME/.VFIOinput/input_attach.sh
+
+super + p
+	sudo $HOME/.VFIOinput/input_detach.sh
+
 # activate light-locker
 #super + Escape
 #	light-locker-command -l

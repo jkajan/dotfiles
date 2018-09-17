@@ -23,6 +23,7 @@ alias ..='cd ..'
 alias ll='ls -la'
 alias svim='sudo nvim'
 alias changecolors='wal --theme random -o $HOME/git/dotfiles/.config/wal/postwal.sh -g'
+alias cp='rsync -P'
 
 PROMPT='%F{green}%?%f %# '
 RPROMPT='%F{red}%/%f'
