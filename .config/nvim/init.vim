@@ -3,6 +3,7 @@ Plug 'dylanaraps/wal.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'valloric/youcompleteme'
+Plug 'vim-latex/vim-latex'
 call plug#end()
 
 syntax on
@@ -12,6 +13,9 @@ set softtabstop=0 noexpandtab
 set number
 set clipboard=unnamed
 set statusline=%{fugitive#statusline()}
+
+filetype plugin on
+filetype indent on
 
 colorscheme base16-mocha
 

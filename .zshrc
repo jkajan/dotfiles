@@ -24,6 +24,7 @@ alias ll='ls -la'
 alias svim='sudo nvim'
 alias changecolors='wal --theme random -o $HOME/git/dotfiles/.config/wal/postwal.sh -g'
 alias cp='rsync -P'
+alias mat='curl api.teknolog.fi/taffa/sv/today/'
 
 PROMPT='%F{green}%?%f %# '
 RPROMPT='%F{red}%/%f'
