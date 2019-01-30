@@ -22,7 +22,7 @@ alias ls='ls --color=auto'
 alias ..='cd ..'
 alias ll='ls -la'
 alias svim='sudo nvim'
-alias changecolors='wal --theme random -o $HOME/git/dotfiles/.config/wal/postwal.sh -g'
+alias changecolors='wal --theme random -o "$HOME/git/dotfiles/.config/wal/postwal.sh"'
 alias cp='rsync -P'
 alias mat='curl api.teknolog.fi/taffa/sv/today/'
 

@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 Plug 'dylanaraps/wal.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
