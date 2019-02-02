@@ -12,7 +12,7 @@ rofi.hide-scrollbar		true
 rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
 
 # Light theme.
-rofi.theme: ~/.cache/wal/colors-rofi-light.rasi
+#rofi.theme: ~/.cache/wal/colors-rofi-light.rasi
 
 ! Set the desired separator style
 rofi.separator-style: none

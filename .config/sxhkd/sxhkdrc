@@ -14,7 +14,7 @@ super + BackSpace
 
 # change colorscheme with wal
 super + Home
-	wal --theme random -o $HOME/github/dotfiles/.config/wal/postwal.sh -g
+	wal --theme random -o $HOME/git/dotfiles/.config/wal/postwal.sh
 
 super + o
 	sudo $HOME/.VFIOinput/input_attach.sh
