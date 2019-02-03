@@ -16,6 +16,12 @@ super + BackSpace
 super + Home
 	wal --theme random -o $HOME/git/dotfiles/.config/wal/postwal.sh
 
+super + u 
+	sudo $HOME/.VFIOinput/audio_attach.sh
+
+super + i
+	sudo $HOME/.VFIOinput/audio_detach.sh
+
 super + o
 	sudo $HOME/.VFIOinput/input_attach.sh
 
