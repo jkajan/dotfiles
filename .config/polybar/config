@@ -55,7 +55,7 @@ font-1 = Wuncon Siji:size=11;1
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = filesystem volume cpu wlan battery date 
+modules-right = filesystem pulseaudio cpu wlan battery date 
 
 tray-position = right
 tray-padding = 2
@@ -99,7 +99,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{A1:thunar&:}%{F#0a81f5}%{F-} %percentage_used%%%{A}
+label-mounted = %{A1:pcmanfm&:}%{F#0a81f5}%{F-} %percentage_used%%%{A}
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -173,7 +173,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.red}
-label = %{A1:urxvt -e htop&:}%percentage%%%{A}
+label = %{A1:st -e htop&:}%percentage%%%{A}
 
 [module/memory]
 type = internal/memory
@@ -222,8 +222,8 @@ format-disconnected = <label-disconnected>
 type = internal/date
 interval = 5
 
-date = 
-date-alt = " %m.%d"
+date-alt = 
+date = " %d.%m"
 
 time = %H:%M
 time-alt = %H:%M
@@ -233,12 +233,9 @@ format-prefix-foreground = ${colors.blue}
 
 label = %date% %time%
 
-[module/volume]
-type = internal/volume
-
-speaker-mixer = Speaker
-headphone-mixer = Headphone
-headphone-id = 24
+[module/pulseaudio]
+type = internal/pulseaudio
+use-ui-max = true
 
 format-volume = <ramp-volume> <label-volume> 
 label-volume = %percentage%%
@@ -259,7 +256,7 @@ ramp-headphones-1 = 
 type = internal/battery
 battery = BAT0
 adapter = ADP1
-full-at = 98
+full-at = 99
 
 format-charging = <animation-charging> <label-charging>
 

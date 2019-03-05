@@ -9,6 +9,7 @@ bspc config presel_feedback_color "$color1"
 
 wal --theme random -o "${HOME}/git/dotfiles/.config/wal/postwal.sh"
 xsetroot -cursor_name left_ptr &
+dunst &
 telegram-desktop &
 discord &
 polybar spacebar &
@@ -19,7 +20,7 @@ syncthing-gtk &
 conky &
 sxhkd &
 
-bspc monitor -d 1 2 3 4 5 T S
+bspc monitor -d 1 2 3 4 5 6 7
 
 bspc config border_width         2
 bspc config window_gap          20
