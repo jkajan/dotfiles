@@ -16,6 +16,7 @@ redshift 63.11:24.49 &
 udiskie &
 setxkbmap fi &
 syncthing-gtk &
+conky &
 sxhkd &
 
 bspc monitor -d 1 2 3 4 5 T S
