@@ -55,7 +55,7 @@ font-1 = Wuncon Siji:size=11;1
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = filesystem pulseaudio cpu wlan battery date 
+modules-right = filesystem pulseaudio cpu wlan notmuch-unread battery date 
 
 tray-position = right
 tray-padding = 2
@@ -72,6 +72,14 @@ wm-restack = bspwm
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
+
+[module/notmuch-unread]
+type = custom/script
+exec = notmuch count tag:unread
+interval = 30
+label = %output%
+click-left = st -e neomutt
+format-prefix = " "
 
 [module/xwindow]
 type = internal/xwindow
@@ -99,39 +107,25 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{A1:pcmanfm&:}%{F#0a81f5}%{F-} %percentage_used%%%{A}
+label-mounted = %{A1:pcmanfm&:} %percentage_used%%%{A}
 label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
+label-mounted-foreground = ${colors.foreground}
+
 
 [module/bspwm]
 type = internal/bspwm
 
-label-focused-background = ${colors.background-alt}
-label-focused-padding = 1
-label-focused = %icon%
-
-label-occupied-padding = 1 
-label-occupied = %icon%
-
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 1
-
-label-empty = %icon%
 label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 1
-
 enable-scroll = false
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-6 = T;
-ws-icon-7 = N;
-ws-icon-8 = S;
-ws-icon-default = #
 
-
+label-focused-background = ${colors.background-alt}
+label-focused-foreground = ${colors.background}
+label-focused = %icon%
+#ws-icon-0 = "1;  "
+ws-icon-default = "  "
+label-occupied = "  "
+label-empty = "  " 
 
 [module/mpd]
 type = internal/mpd
@@ -172,7 +166,6 @@ card = intel_backlight
 type = internal/cpu
 interval = 2
 format-prefix = " "
-format-prefix-foreground = ${colors.red}
 label = %{A1:st -e htop&:}%percentage%%%{A}
 
 [module/memory]
@@ -195,6 +188,13 @@ format-disconnected = <label-disconnected>
 #format-disconnected-underline = ${self.format-connected-underline}
 #label-disconnected = %ifname% disconnected
 #label-disconnected-foreground = ${colors.foreground-alt}
+
+format-packetloss = <animation-packetloss> <label-connected>
+animation-packetloss-0 = "  "
+animation-packetloss-0-foreground = ${colors.red}
+animation-packetloss-1 = "  "
+animation-packetloss-1-foreground = ${colors.orange}
+animation-packetloss-framerate = 500
 
 ramp-signal-0 = 
 ramp-signal-1 = 
@@ -223,28 +223,28 @@ type = internal/date
 interval = 5
 
 date-alt = 
-date = " %d.%m"
+date = " %d %B"
 
 time = %H:%M
 time-alt = %H:%M
 
 format-prefix = 
-format-prefix-foreground = ${colors.blue}
+#format-prefix-foreground = ${colors.blue}
 
 label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-use-ui-max = true
+use-ui-max = false
 
 format-volume = <ramp-volume> <label-volume> 
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
-ramp-volume-foreground = ${colors.orange}
-ramp-headphones-foreground = ${colors.orange}
+ramp-volume-foreground = ${colors.blue}
+ramp-headphones-foreground = ${colors.blue}
 
 format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
+format-muted-foreground = ${colors.foreground}
 label-muted = "--%"
 
 ramp-volume-0 = 

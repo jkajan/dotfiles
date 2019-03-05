@@ -11,7 +11,6 @@ wal --theme random -o "${HOME}/git/dotfiles/.config/wal/postwal.sh"
 xsetroot -cursor_name left_ptr &
 dunst &
 telegram-desktop &
-discord &
 polybar spacebar &
 redshift 63.11:24.49 &
 udiskie &
@@ -36,5 +35,4 @@ bspc config auto_cancel true
 bspc rule -a TelegramDesktop desktop='^6'
 bspc rule -a discord desktop='^6'
 bspc rule -a vlc sticky=on state='pseudo_tiled'
-bspc rule -a 'Steam' desktop='^8'
 
