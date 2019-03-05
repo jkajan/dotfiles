@@ -61,5 +61,5 @@ conky.config = {
 }
 
 conky.text = [[
-${execpi 300 khal}
+${execpi 3 khal list}
 ]]
