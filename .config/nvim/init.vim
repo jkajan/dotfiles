@@ -4,6 +4,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'valloric/youcompleteme'
 Plug 'vim-latex/vim-latex'
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
 syntax on
