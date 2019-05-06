@@ -79,7 +79,7 @@ exec = notmuch count tag:unread
 interval = 30
 label = %output%
 click-left = st -e neomutt
-format-prefix = " "
+format-prefix = "MAIL: "
 
 [module/xwindow]
 type = internal/xwindow
@@ -107,7 +107,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{A1:pcmanfm&:} %percentage_used%%%{A}
+label-mounted = %{A1:pcmanfm&:}DSK: %percentage_used%%%{A}
 label-unmounted = %mountpoint% not mounted
 label-mounted-foreground = ${colors.foreground}
 
@@ -123,9 +123,9 @@ label-focused-background = ${colors.background-alt}
 label-focused-foreground = ${colors.background}
 label-focused = %icon%
 #ws-icon-0 = "1;  "
-ws-icon-default = "  "
-label-occupied = "  "
-label-empty = "  " 
+ws-icon-default = " # "
+label-occupied = " @ "
+label-empty = " - " 
 
 [module/mpd]
 type = internal/mpd
@@ -165,7 +165,7 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = "CPU: "
 label = %{A1:st -e htop&:}%percentage%%%{A}
 
 [module/memory]
@@ -243,12 +243,12 @@ label-volume-foreground = ${root.foreground}
 ramp-volume-foreground = ${colors.blue}
 ramp-headphones-foreground = ${colors.blue}
 
-format-muted-prefix = " "
+format-muted-prefix = "VOL: "
 format-muted-foreground = ${colors.foreground}
 label-muted = "--%"
 
-ramp-volume-0 = 
-ramp-volume-1 = 
+ramp-volume-0 = vol:
+ramp-volume-1 = VOL:
 ramp-headphones-0 = 
 ramp-headphones-1 = 
 

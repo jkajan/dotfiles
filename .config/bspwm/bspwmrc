@@ -32,7 +32,5 @@ bspc config gapless_monocle      false
 bspc config focus_follows_pointer true
 bspc config auto_cancel true
 
-bspc rule -a TelegramDesktop desktop='^6'
-bspc rule -a discord desktop='^6'
 bspc rule -a vlc sticky=on state='pseudo_tiled'
 
