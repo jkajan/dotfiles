@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer for vdirsync
+
+[Timer]
+OnBootSec=1m
+OnUnitActiveSec=1m
+Unit=vdirsync.service
+
+[Install]
+WantedBy=timers.target
