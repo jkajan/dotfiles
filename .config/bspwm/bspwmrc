@@ -16,6 +16,7 @@ redshift 63.11:24.49 &
 udiskie &
 setxkbmap fi &
 syncthing-gtk &
+discord &
 conky &
 sxhkd &
 
@@ -33,4 +34,3 @@ bspc config focus_follows_pointer true
 bspc config auto_cancel true
 
 bspc rule -a vlc sticky=on state='pseudo_tiled'
-
