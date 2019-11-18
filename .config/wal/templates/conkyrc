@@ -48,7 +48,7 @@ conky.config = {{
     draw_outline = false,
     draw_shades = false,
     use_xft = true,
-	font = ' t cherry:pixelsize=13',
+	font = 'Source Code Pro:pixelsize=13',
     gap_x = 25,
     gap_y = 50,
     minimum_height = 5,

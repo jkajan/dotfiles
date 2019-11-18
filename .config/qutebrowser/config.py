@@ -24,7 +24,7 @@ for k, v in dict_attrs(yaml_data):
 
 #Set most of the fonts
 
-currentFont = '13pt t cherry'
+currentFont = '11pt Source Code Pro'
 c.fonts.completion.entry = currentFont
 c.fonts.completion.category = currentFont
 c.fonts.downloads = currentFont
@@ -52,7 +52,7 @@ c.tabs.favicons.scale = 1.2
 c.tabs.favicons.show = "never"
 
 #The format to use for the tab title.
-c.tabs.title.format = '{title}'
+#c.tabs.title.format = '{title}'
 # Default monospace fonts. Whenever "monospace" is used in a font
 # setting, it's replaced with the fonts listed here.
 # Type: Font

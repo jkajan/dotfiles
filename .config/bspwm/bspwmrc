@@ -9,6 +9,7 @@ bspc config presel_feedback_color "$color1"
 
 wal --theme random -o "${HOME}/git/dotfiles/.config/wal/postwal.sh"
 xsetroot -cursor_name left_ptr &
+
 dunst &
 telegram-desktop &
 polybar spacebar &
@@ -16,9 +17,13 @@ redshift 63.11:24.49 &
 udiskie &
 setxkbmap fi &
 syncthing-gtk &
-discord &
-conky &
 sxhkd &
+slack &
+setxkbmap fi &
+$HOME/.config/nvim/bspwm_border_color/listener
+setxkbmap -option "caps:none"; xmodmap -e "keycode 66 = Escape" & 
+
+
 
 bspc monitor -d 1 2 3 4 5 6 7
 
