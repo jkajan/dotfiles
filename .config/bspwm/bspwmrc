@@ -19,21 +19,20 @@ setxkbmap fi &
 syncthing-gtk &
 sxhkd &
 slack &
+picom &
 setxkbmap fi &
 $HOME/.config/nvim/bspwm_border_color/listener &
-setxkbmap -option "caps:none"; xmodmap -e "keycode 66 = Escape" & 
-
-
+$HOME/capsdisable.sh &
 
 bspc monitor -d 1 2 3 4 5 6 7
 
-bspc config border_width         2
+bspc config border_width         3
 bspc config window_gap          20
 bspc config top_padding			25
 bspc config single_monocle		true
 
 bspc config split_ratio          0.52
-bspc config borderless_monocle   true
+bspc config borderless_monocle   false
 bspc config gapless_monocle      false
 bspc config focus_follows_pointer true
 bspc config auto_cancel true

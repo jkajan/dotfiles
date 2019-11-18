@@ -24,7 +24,7 @@ for k, v in dict_attrs(yaml_data):
 
 #Set most of the fonts
 
-currentFont = '11pt Source Code Pro'
+currentFont = '11pt Gohu GohuFont'
 c.fonts.completion.entry = currentFont
 c.fonts.completion.category = currentFont
 c.fonts.downloads = currentFont
@@ -37,7 +37,7 @@ c.fonts.prompts = currentFont
 c.fonts.tabs = currentFont
 c.fonts.statusbar = currentFont
 
-c.fonts.web.family.standard = ' t cherry'
+c.fonts.web.family.standard = 'Gohu GohuFont'
 
 #Padding around text for tabs
 c.tabs.padding = {"top": 5, "bottom": 5, "left": 5, "right": 5}

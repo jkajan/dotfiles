@@ -26,7 +26,7 @@ map <C-L> <C-W>l
 
 "bspwm color border:
 if $DISPLAY != ""
-	"autocmd FocusGained * :silent execute "!$HOME/.cache/wal/nvim_set " . shellescape(mode())
+	autocmd FocusGained * :silent execute "!$HOME/.cache/wal/nvim_set " . shellescape(mode())
 	autocmd InsertEnter * :silent execute "!$HOME/.cache/wal/nvim_set i"
 	autocmd InsertLeave * :silent execute "!$HOME/.cache/wal/nvim_set n"
 	autocmd CmdlineEnter * :silent execute "!$HOME/.cache/wal/nvim_set c"

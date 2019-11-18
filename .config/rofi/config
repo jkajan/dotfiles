@@ -1,10 +1,10 @@
 rofi.lines:				10
 rofi.columns:			1
-rofi.font:				Source Code Pro 11
+rofi.font:				Gohu GohuFont:style=regular 11
 rofi.padding:			20
 rofi.bw:				2
 rofi.disable-history:	false
-rofi.terminal:			st
+rofi.terminal:			alacritty
 rofi.fullscreen: 		false
 rofi.hide-scrollbar		true
 
