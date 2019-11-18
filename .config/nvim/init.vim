@@ -26,9 +26,14 @@ map <C-L> <C-W>l
 
 "bspwm color border:
 if $DISPLAY != ""
-	autocmd FocusGained * :silent execute "!$HOME/.config/nvim/bspwm_border_color/set " . shellescape(mode())
-	autocmd InsertEnter * :silent execute "!$HOME/.config/nvim/bspwm_border_color/set i"
-	autocmd InsertLeave * :silent execute "!$HOME/.config/nvim/bspwm_border_color/set n"
-	autocmd VimLeave * :silent !$HOME/.vim/bspwm_border_color/reset
+	"autocmd FocusGained * :silent execute "!$HOME/.cache/wal/nvim_set " . shellescape(mode())
+	autocmd InsertEnter * :silent execute "!$HOME/.cache/wal/nvim_set i"
+	autocmd InsertLeave * :silent execute "!$HOME/.cache/wal/nvim_set n"
+	autocmd CmdlineEnter * :silent execute "!$HOME/.cache/wal/nvim_set c"
+	autocmd CmdlineLeave * :silent execute "!$HOME/.cache/wal/nvim_set n"
+	autocmd VimLeave * :silent !$HOME/.cache/wal/nvim_reset
 	set title titlestring=VIM "So the listener script can tell its a VIM window
 endif
+
+" disable editing buffer on RO files
+autocmd BufRead * let &l:modifiable = !&readonly

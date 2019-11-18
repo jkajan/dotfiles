@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#this script is called by the autocmd events in ~/.config/nvim/init.nvim
+if [ $1 = "i" ]; then
+	bspc config focused_border_color "{color10}" #red
+elif [ $1 = "c" ]; then
+	bspc config focused_border_color "{color11}" #normal border color
+else
+	bspc config focused_border_color "{color15}" #normal border color
+fi
+bspc config borderless_monocle "false"

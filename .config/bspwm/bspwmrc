@@ -20,7 +20,7 @@ syncthing-gtk &
 sxhkd &
 slack &
 setxkbmap fi &
-$HOME/.config/nvim/bspwm_border_color/listener
+$HOME/.config/nvim/bspwm_border_color/listener &
 setxkbmap -option "caps:none"; xmodmap -e "keycode 66 = Escape" & 
 
 
