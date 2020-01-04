@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo "Setting background"
-hsetroot -solid $(cat $HOME/.cache/wal/colors | head -1)
-
 . "${HOME}/.cache/wal/colors.sh"
 
 bspc config normal_border_color "$color0"
@@ -14,5 +11,8 @@ $HOME/.config/wal/qutebrowser_reload.py
 oomox-cli $HOME/.cache/wal/colors-oomox
 oomox-archdroid-icons-cli $HOME/.cache/wal/colors-oomox
 $HOME/.telegram-palette-gen/telegram-palette-gen --palette $HOME/.cache/wal/colors.sh
+cp $HOME/.cache/wal/pscircle.service $HOME/.config/systemd/user/
+systemctl --user daemon-reload
+systemctl --user restart pscircle.service
 pkill dunst 
 dunst &
