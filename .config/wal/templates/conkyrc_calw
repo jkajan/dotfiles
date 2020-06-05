@@ -35,8 +35,9 @@ conky.config = {{
     color7 = '{color7.strip}',
     color8 = '{color8.strip}',
     color9 = '{color9.strip}',
+	xinerama_head = 2,
     alignment = 'top_left',
-    background = true,
+    background = false,
     border_width = 1,
     cpu_avg_samples = 2,
     default_color = 'white',
@@ -49,7 +50,7 @@ conky.config = {{
     use_xft = true,
 	font = 'Source Code Pro:pixelsize=15',
     gap_x = 25,
-    gap_y = 75,
+    gap_y = 25,
     minimum_height = 5,
     minimum_width = 5,
     net_avg_samples = 2,
@@ -72,5 +73,5 @@ conky.config = {{
 }}
 
 conky.text = [[
-${{color8}} ${{execi 300 gcalcli --nocolor agenda}}
+${{color8}} ${{execi 300 gcalcli --nocolor --lineart ascii calw}}
 ]]
