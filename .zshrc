@@ -27,6 +27,8 @@ alias cp='rsync -P'
 alias mat='curl api.teknolog.fi/taffa/sv/today/'
 alias vi='nvim'
 alias vim='nvim'
+#Mounta styrelseskivan
+alias styrelseskiva='sftpman mount styrelseskivan'
 
 PROMPT='%F{green}%?%f %# '
 RPROMPT='%F{red}%/%f'
