@@ -4,3 +4,5 @@
 .config/qutebrowser/autoconfig.yml
 .config/systemd/user/pscircle.service
 
+.config/watson/frames*
+.config/watson/state*

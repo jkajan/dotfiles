@@ -1,6 +1,6 @@
 rofi.lines:				10
 rofi.columns:			1
-rofi.font:				Gohu GohuFont:style=regular 11
+rofi.font:				Source Code Pro 10
 rofi.padding:			20
 rofi.bw:				2
 rofi.disable-history:	false
