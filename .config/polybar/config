@@ -55,7 +55,7 @@ font-1 = Wuncon Siji:size=11;1
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = filesystem pulseaudio cpu wlan notmuch-unread battery date 
+modules-right = filesystem cpu wlan notmuch-unread battery date 
 
 tray-position = right
 tray-padding = 2

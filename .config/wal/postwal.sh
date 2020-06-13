@@ -13,6 +13,7 @@ oomox-archdroid-icons-cli $HOME/.cache/wal/colors-oomox
 $HOME/.telegram-palette-gen/telegram-palette-gen --palette $HOME/.cache/wal/colors.sh
 cp $HOME/.cache/wal/pscircle.service $HOME/.config/systemd/user/
 systemctl --user daemon-reload
-systemctl --user restart pscircle.service
+#systemctl --user restart pscircle.service
+hsetroot -solid "$color0"
 pkill dunst 
 dunst &

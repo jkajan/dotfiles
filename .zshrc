@@ -27,6 +27,7 @@ alias cp='rsync -P'
 alias mat='curl api.teknolog.fi/taffa/sv/today/'
 alias vi='nvim'
 alias vim='nvim'
+alias sudo='sudo '
 
 PROMPT='%F{green}%?%f %# '
 RPROMPT='%F{red}%/%f'
@@ -44,3 +45,5 @@ cat ~/.cache/wal/sequences
 source ~/.cache/wal/colors-tty.sh
 
 export FONT='Source Code Pro'
+export EDITOR=nvim
+export PATH=$PATH:~/.local/bin

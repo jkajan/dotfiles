@@ -4,10 +4,10 @@ Description=Runs pscircle to continuously update desktop wallpaper
 [Service]
 Environment=DISPLAY=:0
 ExecStart=/bin/zsh -c "while true; do pscircle \
---output-width=2560 \
---output-height=1440 \
+--output-width=1080 \
+--output-height=1920 \
 --tree-font-size=13 \
---dot-border-width=0 \
+--dot-border-width=3 \
 --dot-radius=6 \
 --tree-font-face=Arial \
 --root-pid=1 \
