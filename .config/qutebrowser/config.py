@@ -24,7 +24,7 @@ for k, v in dict_attrs(yaml_data):
 
 #Set most of the fonts
 
-currentFont = '11pt Gohu GohuFont'
+currentFont = '11pt Source Code Pro'
 c.fonts.completion.entry = currentFont
 c.fonts.completion.category = currentFont
 c.fonts.downloads = currentFont
@@ -34,10 +34,9 @@ c.fonts.messages.error = currentFont
 c.fonts.messages.info = currentFont
 c.fonts.messages.warning = currentFont
 c.fonts.prompts = currentFont
-c.fonts.tabs = currentFont
 c.fonts.statusbar = currentFont
 
-c.fonts.web.family.standard = 'Gohu GohuFont'
+c.fonts.web.family.standard = 'Source Code Pro'
 
 #Padding around text for tabs
 c.tabs.padding = {"top": 5, "bottom": 5, "left": 5, "right": 5}
@@ -453,10 +452,6 @@ c.fonts.prompts = '10pt Source Code Pro'
 # Font used in the statusbar.
 # Type: Font
 c.fonts.statusbar = '10pt Source Code Pro'
-
-# Font used in the tab bar.
-# Type: QtFont
-c.fonts.tabs = '10pt Source Code Pro'
 
 # Font family for standard fonts.
 # Type: FontFamily

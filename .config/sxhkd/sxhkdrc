@@ -37,6 +37,11 @@ XF86AudioLowerVolume
 XF86AudioRaiseVolume
 		amixer sset Master 5+
 
+super + u
+		$HOME/.VFIOinput/audio_attach.sh
+
+super + i
+		$HOME/.VFIOinput/audio_detach.sh
 #
 # bspwm hotkeys
 #
