@@ -27,8 +27,6 @@ alias cp='rsync -P'
 alias mat='curl api.teknolog.fi/taffa/sv/today/'
 alias vi='nvim'
 alias vim='nvim'
-#Mounta styrelseskivan
-alias styrelseskiva='sftpman mount styrelseskivan'
 
 PROMPT='%F{green}%?%f %# '
 RPROMPT='%F{red}%/%f'
@@ -40,7 +38,7 @@ RPROMPT='%F{red}%/%f'
 (cat ~/.cache/wal/sequences &)
 
 # Alternative (blocks terminal for 0-3ms)
-cat ~/.cache/wal/sequences
+#cat ~/.cache/wal/sequences
 
 # To add support for TTYs this line can be optionally added.
 source ~/.cache/wal/colors-tty.sh
