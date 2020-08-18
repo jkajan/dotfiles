@@ -24,7 +24,7 @@ for k, v in dict_attrs(yaml_data):
 
 #Set most of the fonts
 
-currentFont = '11pt Gohu GohuFont'
+currentFont = '11pt Source Code Pro'
 c.fonts.completion.entry = currentFont
 c.fonts.completion.category = currentFont
 c.fonts.downloads = currentFont
@@ -37,7 +37,7 @@ c.fonts.prompts = currentFont
 c.fonts.tabs = currentFont
 c.fonts.statusbar = currentFont
 
-c.fonts.web.family.standard = 'Gohu GohuFont'
+c.fonts.web.family.standard = 'Source Code Pro'
 
 #Padding around text for tabs
 c.tabs.padding = {"top": 5, "bottom": 5, "left": 5, "right": 5}
@@ -56,7 +56,7 @@ c.tabs.favicons.show = "never"
 # Default monospace fonts. Whenever "monospace" is used in a font
 # setting, it's replaced with the fonts listed here.
 # Type: Font
-#c.fonts.monospace = '" t cherry","Gohu GohuFont","xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
+c.fonts.monospace = '"Source Code Pro","xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
 
 c.downloads.location.directory = "$HOME/downloads"
 c.downloads.location.prompt = False
