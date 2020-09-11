@@ -2,6 +2,7 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+KEYTIMEOUT=5
 setopt autocd
 bindkey -v
 
@@ -53,13 +54,22 @@ setopt PROMPT_SUBST
 
 vim_ins_mode="%#"
 vim_cmd_mode="%F{red}>%f"
+vim_vis_mode="%F{green}V%f"
 vim_mode=$vim_ins_mode
+precmd () {
+	vim_mode=$vim_ins_mode
+}
 
 PROMPT='%F{red}%(?..%? )%f${vcs_info_msg_0_}${vim_mode} '
 RPROMPT='%F{yellow}%/%f'
 
 function zle-keymap-select {
-  vim_mode="${${KEYMAP/vicmd/${vim_cmd_mode}}/(main|viins)/${vim_ins_mode}}"
+  #vim_mode="${${KEYMAP/vicmd/${vim_cmd_mode}}/(main|viins)/${vim_ins_mode}}"
+  case ${KEYMAP} in
+	  (vicmd)		vim_mode="%F{red}>%f" ;;
+	  (main|viins)	vim_mode="%#" ;;
+	  (*)			vim_mode="%#" ;;
+  esac
   zle reset-prompt
 }
 zle -N zle-keymap-select

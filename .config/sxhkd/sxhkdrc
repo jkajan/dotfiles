@@ -17,6 +17,12 @@ super + @space
 super + BackSpace
 	WINIT_HIDPI_FACTOR=1.4 qutebrowser
 
+super + u
+	sudo $HOME/.VFIOinput/audio_attach.sh
+
+super + i
+	sudo $HOME/.VFIOinput/audio_detach.sh
+
 # monitor brightness hotkeys
 XF86MonBrightnessUp
 	xbacklight -inc 10
