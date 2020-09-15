@@ -60,8 +60,8 @@ precmd () {
 	vim_mode=$vim_ins_mode
 }
 
-mod_vcs_info_msg_0_=${${vcs_info_msg_0_//\(git\)-/}//\]-/\] }
-PROMPT='%F{red}%(?..%? )%f%F{blue}${mod_vcs_info_msg_0_}%f${vim_mode} '
+mod_vcs_info_msg_0_=${vcs_info_msg_0_//\(git\)-/}
+PROMPT='%F{red}%(?..%? )%f%F{blue}${vcs_info_msg_0_}%f${vim_mode} '
 RPROMPT='%F{yellow}%/%f'
 
 function zle-keymap-select {
