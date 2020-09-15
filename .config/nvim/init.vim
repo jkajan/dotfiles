@@ -37,3 +37,5 @@ endif
 
 " disable editing buffer on RO files
 autocmd BufRead * let &l:modifiable = !&readonly
+
+autocmd Filetype yaml setlocal tabstop=2

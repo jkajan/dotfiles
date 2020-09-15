@@ -1,0 +1,12 @@
+---
+# Ansible playbook for linking all dotfiles
+- hosts: localhost
+  tasks:
+  - name: Symlink zshrc
+    file:
+      src: "{{ playbook_dir }}/zshrc"
+      dest: "{{ home }}/.zshrc"
+      state: link
+
+  vars:
+    home: "{{ lookup ('env', 'HOME') }}"
