@@ -1,40 +1,37 @@
 # wm independent hotkeys
 #
-
+super + Escape
+		$HOME/meta/watson_dmenu
 # terminal emulator
 super + Return
 		alacritty
 
+# screen locker
 super + Delete
-		i3lock -c 555555
+		$HOME/.config/i3lock/i3lock_run.sh
+
 # program launcher
 super + @space
 	rofi -config $HOME/.config/rofi/config -show run
 # qutebrowser
 super + BackSpace
-	qutebrowser
+	WINIT_HIDPI_FACTOR=1.4 qutebrowser
 
-# change colorscheme with wal
-super + Home
-	wal --theme random -o $HOME/git/dotfiles/.config/wal/postwal.sh
-
-super + u 
+super + u
 	sudo $HOME/.VFIOinput/audio_attach.sh
 
 super + i
 	sudo $HOME/.VFIOinput/audio_detach.sh
 
-super + o
-	sudo $HOME/.VFIOinput/input_attach.sh
+# monitor brightness hotkeys
+XF86MonBrightnessUp
+	xbacklight -inc 10
 
-super + p
-	sudo $HOME/.VFIOinput/input_detach.sh
+XF86MonBrightnessDown
+	xbacklight -dec 10
 
-# activate light-locker
-#super + Escape
-#	light-locker-command -l
 # make sxhkd reload its configuration files:
-super + Escape
+super + shift + Escape
 	pkill -USR1 -x sxhkd
 
 XF86AudioMute
@@ -46,6 +43,11 @@ XF86AudioLowerVolume
 XF86AudioRaiseVolume
 		amixer sset Master 5+
 
+super + u
+		$HOME/.VFIOinput/audio_attach.sh
+
+super + i
+		$HOME/.VFIOinput/audio_detach.sh
 #
 # bspwm hotkeys
 #

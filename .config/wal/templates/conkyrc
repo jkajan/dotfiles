@@ -35,9 +35,8 @@ conky.config = {{
     color7 = '{color7.strip}',
     color8 = '{color8.strip}',
     color9 = '{color9.strip}',
-
     alignment = 'top_left',
-    background = false,
+    background = true,
     border_width = 1,
     cpu_avg_samples = 2,
     default_color = 'white',
@@ -48,9 +47,9 @@ conky.config = {{
     draw_outline = false,
     draw_shades = false,
     use_xft = true,
-	font = 'Source Code Pro:pixelsize=13',
+	font = 'Source Code Pro:pixelsize=15',
     gap_x = 25,
-    gap_y = 50,
+    gap_y = 75,
     minimum_height = 5,
     minimum_width = 5,
     net_avg_samples = 2,
@@ -73,7 +72,4 @@ conky.config = {{
 }}
 
 conky.text = [[
-
-${{color7}} ${{exec khal list --format '{{start-style}} {{title}}' --day-format '{{name}}'}}
-
 ]]

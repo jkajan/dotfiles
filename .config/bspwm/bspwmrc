@@ -11,6 +11,8 @@ screen1=$(xrandr | grep " connected " | awk '{ print$1 }')
 
 if "$screen1" == "eDP"; then
 	xrandr --output eDP --mode 1920x1080 --rotate normal --output HDMI-A-0 --off
+else
+	xrandr --output DisplayPort-0 --off --output HDMI-0 --primary --mode 2560x1440 --rate 144 --pos 1080x240 --rotate normal --output DVI-0 --mode 1920x1080 --rate 144 --pos 0x0 --rotate left
 fi
 
 wal --theme random -o "${HOME}/git/dotfiles/.config/wal/postwal.sh"
@@ -22,15 +24,17 @@ polybar spacebar &
 redshift 63.11:24.49 &
 udiskie &
 setxkbmap fi &
+cadence &
 syncthing-gtk &
 sxhkd &
 picom &
-setxkbmap fi &
+steam-native &
+discord &
+
 $HOME/.config/nvim/bspwm_border_color/listener &
 $HOME/capsdisable.sh &
 
-bspc monitor 0x00600004 -d 1 2 3 4 5
-#bspc monitor 0x00600002 -d 6 7
+bspc monitor primary -d 1 2 3 4 5
 
 bspc config border_width         3
 bspc config window_gap          20

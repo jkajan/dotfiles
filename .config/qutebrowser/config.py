@@ -41,20 +41,421 @@ c.fonts.web.family.standard = 'Source Code Pro'
 #Padding around text for tabs
 c.tabs.padding = {"top": 5, "bottom": 5, "left": 5, "right": 5}
 
-#Open new tabs (middleclick/ctrl+click) in the background
+# Enable JavaScript.
+# Type: Bool
+config.set('content.javascript.enabled', True, 'file://*')
+
+# Enable JavaScript.
+# Type: Bool
+config.set('content.javascript.enabled', True, 'chrome://*/*')
+
+# Enable JavaScript.
+# Type: Bool
+config.set('content.javascript.enabled', True, 'qute://*/*')
+
+# Directory to save downloads to. If unset, a sensible OS-specific
+# default is used.
+# Type: Directory
+c.downloads.location.directory = '$HOME/Downloads'
+
+# Prompt the user for the download location. If set to false,
+# `downloads.location.directory` will be used.
+# Type: Bool
+c.downloads.location.prompt = False
+
+# Default program used to open downloads. If null, the default internal
+# handler is used. Any `{}` in the string will be expanded to the
+# filename, else the filename will be appended.
+# Type: String
+c.downloads.open_dispatcher = None
+
+# Editor (and arguments) to use for the `open-editor` command. The
+# following placeholders are defined: * `{file}`: Filename of the file
+# to be edited. * `{line}`: Line in which the caret is found in the
+# text. * `{column}`: Column in which the caret is found in the text. *
+# `{line0}`: Same as `{line}`, but starting from index 0. * `{column0}`:
+# Same as `{column}`, but starting from index 0.
+# Type: ShellCommand
+c.editor.command = ['alacritty', '-e', 'nvim', '{file}', '-c', 'normal {line}G{column0}l']
+
+# Encoding to use for the editor.
+# Type: Encoding
+c.editor.encoding = 'utf-8'
+
+# CSS border value for hints.
+# Type: String
+c.hints.border = '1px solid #e6e1dc'
+
+# Open new tabs (middleclick/ctrl+click) in the background.
+# Type: Bool
 c.tabs.background = True
 
-#Scaling for favicons in the tab bar
+# Scaling factor for favicons in the tab bar. The tab size is unchanged,
+# so big favicons also require extra `tabs.padding`.
+# Type: Float
 c.tabs.favicons.scale = 1.2
 
-#Disable favicons
-c.tabs.favicons.show = "never"
+# When to show favicons in the tab bar.
+# Type: String
+# Valid values:
+#   - always: Always show favicons.
+#   - never: Always hide favicons.
+#   - pinned: Show favicons only on pinned tabs.
+c.tabs.favicons.show = 'never'
 
-#The format to use for the tab title.
-#c.tabs.title.format = '{title}'
-# Default monospace fonts. Whenever "monospace" is used in a font
-# setting, it's replaced with the fonts listed here.
+# Padding (in pixels) around text for tabs.
+# Type: Padding
+c.tabs.padding = {'top': 5, 'bottom': 5, 'left': 5, 'right': 5}
+
+# Number of close tab actions to remember, per window (-1 for no
+# maximum).
+# Type: Int
+c.tabs.undo_stack_size = 100
+
+# Page to open if :open -t/-b/-w is used without URL. Use `about:blank`
+# for a blank page.
+# Type: FuzzyUrl
+c.url.default_page = 'https://google.com'
+
+# Open base URL of the searchengine if a searchengine shortcut is
+# invoked without parameters.
+# Type: Bool
+c.url.open_base_url = False
+
+# Search engines which can be used via the address bar. Maps a search
+# engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`
+# placeholder. The placeholder will be replaced by the search term, use
+# `{{` and `}}` for literal `{`/`}` signs. The search engine named
+# `DEFAULT` is used when `url.auto_search` is turned on and something
+# else than a URL was entered to be opened. Other search engines can be
+# used by prepending the search engine name to the search term, e.g.
+# `:open google qutebrowser`.
+# Type: Dict
+c.url.searchengines = {'DEFAULT': 'https://google.com/search?q={}'}
+
+# Page(s) to open at the start.
+# Type: List of FuzzyUrl, or FuzzyUrl
+c.url.start_pages = 'https://google.com'
+
+# Default zoom level.
+# Type: Perc
+c.zoom.default = 100
+
+# Background color of the completion widget for odd rows.
+# Type: QssColor
+c.colors.completion.odd.bg = '#2b2b2b'
+
+# Background color of the completion widget for even rows.
+# Type: QssColor
+c.colors.completion.even.bg = '#2b2b2b'
+
+# Foreground color of completion widget category headers.
+# Type: QtColor
+c.colors.completion.category.fg = '#2b2b2b'
+
+# Background color of the completion widget category headers.
+# Type: QssColor
+c.colors.completion.category.bg = '#519f50'
+
+# Top border color of the completion widget category headers.
+# Type: QssColor
+c.colors.completion.category.border.top = '#519f50'
+
+# Bottom border color of the completion widget category headers.
+# Type: QssColor
+c.colors.completion.category.border.bottom = '#2b2b2b'
+
+# Foreground color of the selected completion item.
+# Type: QtColor
+c.colors.completion.item.selected.fg = '#e6e1dc'
+
+# Background color of the selected completion item.
+# Type: QssColor
+c.colors.completion.item.selected.bg = '#6d9cbe'
+
+# Top border color of the selected completion item.
+# Type: QssColor
+c.colors.completion.item.selected.border.top = '#6d9cbe'
+
+# Bottom border color of the selected completion item.
+# Type: QssColor
+c.colors.completion.item.selected.border.bottom = '#6d9cbe'
+
+# Foreground color of the matched text in the completion.
+# Type: QtColor
+c.colors.completion.match.fg = '#a5c261'
+
+# Color of the scrollbar handle in the completion view.
+# Type: QssColor
+c.colors.completion.scrollbar.fg = '#2b2b2b'
+
+# Color of the scrollbar in the completion view.
+# Type: QssColor
+c.colors.completion.scrollbar.bg = '#e6e1dc'
+
+# Background color for the download bar.
+# Type: QssColor
+c.colors.downloads.bar.bg = '#2b2b2b'
+
+# Color gradient start for download text.
+# Type: QtColor
+c.colors.downloads.start.fg = '#e6e1dc'
+
+# Color gradient start for download backgrounds.
+# Type: QtColor
+c.colors.downloads.start.bg = '#b6b3eb'
+
+# Color gradient end for download text.
+# Type: QtColor
+c.colors.downloads.stop.fg = '#e6e1dc'
+
+# Color gradient stop for download backgrounds.
+# Type: QtColor
+c.colors.downloads.stop.bg = '#a5c261'
+
+# Foreground color for downloads with errors.
+# Type: QtColor
+c.colors.downloads.error.fg = '#e6e1dc'
+
+# Background color for downloads with errors.
+# Type: QtColor
+c.colors.downloads.error.bg = '#da4939'
+
+# Font color for hints.
+# Type: QssColor
+c.colors.hints.fg = '#e6e1dc'
+
+# Background color for hints. Note that you can use a `rgba(...)` value
+# for transparency.
+# Type: QssColor
+c.colors.hints.bg = '#2b2b2b'
+
+# Font color for the matched part of hints.
+# Type: QtColor
+c.colors.hints.match.fg = '#ffc66d'
+
+# Text color for the keyhint widget.
+# Type: QssColor
+c.colors.keyhint.fg = '#e6e1dc'
+
+# Highlight color for keys to complete the current keychain.
+# Type: QssColor
+c.colors.keyhint.suffix.fg = '#ffc66d'
+
+# Background color of the keyhint widget.
+# Type: QssColor
+c.colors.keyhint.bg = '#2b2b2b'
+
+# Foreground color of an error message.
+# Type: QssColor
+c.colors.messages.error.fg = '#e6e1dc'
+
+# Background color of an error message.
+# Type: QssColor
+c.colors.messages.error.bg = '#da4939'
+
+# Border color of an error message.
+# Type: QssColor
+c.colors.messages.error.border = '#da4939'
+
+# Foreground color of a warning message.
+# Type: QssColor
+c.colors.messages.warning.fg = '#e6e1dc'
+
+# Background color of a warning message.
+# Type: QssColor
+c.colors.messages.warning.bg = '#ffc66d'
+
+# Border color of a warning message.
+# Type: QssColor
+c.colors.messages.warning.border = '#ffc66d'
+
+# Foreground color of an info message.
+# Type: QssColor
+c.colors.messages.info.fg = '#e6e1dc'
+
+# Background color of an info message.
+# Type: QssColor
+c.colors.messages.info.bg = '#a5c261'
+
+# Border color of an info message.
+# Type: QssColor
+c.colors.messages.info.border = '#a5c261'
+
+# Foreground color for prompts.
+# Type: QssColor
+c.colors.prompts.fg = '#e6e1dc'
+
+# Border used around UI elements in prompts.
+# Type: String
+c.colors.prompts.border = '#2b2b2b'
+
+# Background color for prompts.
+# Type: QssColor
+c.colors.prompts.bg = '#2b2b2b'
+
+# Background color for the selected item in filename prompts.
+# Type: QssColor
+c.colors.prompts.selected.bg = '#ffc66d'
+
+# Foreground color of the statusbar.
+# Type: QssColor
+c.colors.statusbar.normal.fg = '#e6e1dc'
+
+# Background color of the statusbar.
+# Type: QssColor
+c.colors.statusbar.normal.bg = '#2b2b2b'
+
+# Foreground color of the statusbar in insert mode.
+# Type: QssColor
+c.colors.statusbar.insert.fg = '#e6e1dc'
+
+# Background color of the statusbar in insert mode.
+# Type: QssColor
+c.colors.statusbar.insert.bg = '#a5c261'
+
+# Foreground color of the statusbar in private browsing mode.
+# Type: QssColor
+c.colors.statusbar.private.fg = '#e6e1dc'
+
+# Background color of the statusbar in private browsing mode.
+# Type: QssColor
+c.colors.statusbar.private.bg = '#2b2b2b'
+
+# Foreground color of the statusbar in command mode.
+# Type: QssColor
+c.colors.statusbar.command.fg = '#2b2b2b'
+
+# Background color of the statusbar in command mode.
+# Type: QssColor
+c.colors.statusbar.command.bg = '#519f50'
+
+# Background color of the statusbar in private browsing + command mode.
+# Type: QssColor
+c.colors.statusbar.command.private.bg = 'black'
+
+# Foreground color of the statusbar in caret mode.
+# Type: QssColor
+c.colors.statusbar.caret.fg = '#e6e1dc'
+
+# Background color of the statusbar in caret mode.
+# Type: QssColor
+c.colors.statusbar.caret.bg = '#b6b3eb'
+
+# Background color of the progress bar.
+# Type: QssColor
+c.colors.statusbar.progress.bg = '#e6e1dc'
+
+# Default foreground color of the URL in the statusbar.
+# Type: QssColor
+c.colors.statusbar.url.fg = '#e6e1dc'
+
+# Foreground color of the URL in the statusbar on error.
+# Type: QssColor
+c.colors.statusbar.url.error.fg = '#da4939'
+
+# Foreground color of the URL in the statusbar for hovered links.
+# Type: QssColor
+c.colors.statusbar.url.hover.fg = '#6d9cbe'
+
+# Foreground color of the URL in the statusbar on successful load
+# (http).
+# Type: QssColor
+c.colors.statusbar.url.success.http.fg = '#e6e1dc'
+
+# Foreground color of the URL in the statusbar on successful load
+# (https).
+# Type: QssColor
+c.colors.statusbar.url.success.https.fg = '#a5c261'
+
+# Foreground color of the URL in the statusbar when there's a warning.
+# Type: QssColor
+c.colors.statusbar.url.warn.fg = '#ffc66d'
+
+# Background color of the tab bar.
+# Type: QssColor
+c.colors.tabs.bar.bg = '#2b2b2b'
+
+# Foreground color of unselected odd tabs.
+# Type: QtColor
+c.colors.tabs.odd.fg = '#e6e1dc'
+
+# Background color of unselected odd tabs.
+# Type: QtColor
+c.colors.tabs.odd.bg = '#2b2b2b'
+
+# Foreground color of unselected even tabs.
+# Type: QtColor
+c.colors.tabs.even.fg = '#e6e1dc'
+
+# Background color of unselected even tabs.
+# Type: QtColor
+c.colors.tabs.even.bg = '#2b2b2b'
+
+# Foreground color of selected odd tabs.
+# Type: QtColor
+c.colors.tabs.selected.odd.fg = '#2b2b2b'
+
+# Background color of selected odd tabs.
+# Type: QtColor
+c.colors.tabs.selected.odd.bg = '#e6e1dc'
+
+# Foreground color of selected even tabs.
+# Type: QtColor
+c.colors.tabs.selected.even.fg = '#2b2b2b'
+
+# Background color of selected even tabs.
+# Type: QtColor
+c.colors.tabs.selected.even.bg = '#e6e1dc'
+
+# Background color for webpages if unset (or empty to use the theme's
+# color).
+# Type: QtColor
+c.colors.webpage.bg = '#e6e1dc'
+
+# Font used in the completion widget.
 # Type: Font
+c.fonts.completion.entry = '10pt Source Code Pro'
 
-c.downloads.location.directory = "$HOME/downloads"
-c.downloads.location.prompt = False
+# Font used in the completion categories.
+# Type: Font
+c.fonts.completion.category = '10pt Source Code Pro'
+
+# Font used for the downloadbar.
+# Type: Font
+c.fonts.downloads = '10pt Source Code Pro'
+
+# Font used for the hints.
+# Type: Font
+c.fonts.hints = '10pt Source Code Pro'
+
+# Font used in the keyhint widget.
+# Type: Font
+c.fonts.keyhint = '10pt Source Code Pro'
+
+# Font used for error messages.
+# Type: Font
+c.fonts.messages.error = '10pt Source Code Pro'
+
+# Font used for info messages.
+# Type: Font
+c.fonts.messages.info = '10pt Source Code Pro'
+
+# Font used for warning messages.
+# Type: Font
+c.fonts.messages.warning = '10pt Source Code Pro'
+
+# Font used for prompts.
+# Type: Font
+c.fonts.prompts = '10pt Source Code Pro'
+
+# Font used in the statusbar.
+# Type: Font
+c.fonts.statusbar = '10pt Source Code Pro'
+
+# Font family for standard fonts.
+# Type: FontFamily
+c.fonts.web.family.standard = 'Source Code Pro'
+
+# Bindings for normal mode
+config.bind('I', 'open-editor')
