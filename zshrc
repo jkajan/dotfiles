@@ -22,11 +22,15 @@ compdef _watson watson
 #BASE16_SHELL=$HOME/.config/base16-shell/
 #[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
+colors_dark_dir='/usr/lib/python3.8/site-packages/pywal/colorschemes/dark/'
+colors_light_dir='/usr/lib/python3.8/site-packages/pywal/colorschemes/light/'
+
 alias ls='ls --color=auto'
 alias ..='cd ..'
 alias ll='ls -la'
 alias svim='sudo nvim'
-alias changecolors='wal --theme random -o "$HOME/git/dotfiles/.config/wal/postwal.sh"'
+alias chngcol='wal --theme '$( ls -d ${colors_dark_dir}/base16* | shuf -n 1 )' -o "$HOME/git/dotfiles/.config/wal/postwal.sh"'
+alias chngcol_light='wal --theme '$( ls -d ${colors_light_dir}/base16* | shuf -n 1 )' -o "$HOME/git/dotfiles/.config/wal/postwal.sh"'
 alias cp='rsync -P'
 alias mat='curl api.teknolog.fi/taffa/sv/today/'
 alias vi='nvim'
