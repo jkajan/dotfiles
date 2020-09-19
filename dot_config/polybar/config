@@ -1,0 +1,334 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;=====================================================
+
+[colors]
+background = ${xrdb:background:#222}
+background-alt = ${xrdb:color1:#f00}
+foreground = ${xrdb:foreground:#fff}
+foreground-alt = ${xrdb:color4:#f00}
+primary = ${xrdb:color9:#222}
+secondary = ${xrdb:color13:#222}
+red = ${xrdb:color8:#f00}
+blue = ${xrdb:color13:#222}
+alert = ${xrdb:color8:#222}
+yellow = ${xrdb:color10:#f00}
+green = ${xrdb:color11:#f00}
+purple = ${xrdb:color14:#f00}
+orange = ${xrdb:color9:#f00}
+teal = ${xrdb:color12:#f00}
+
+
+[bar/spacebar]
+width = 100%
+height = 25
+offset-x = 0
+offset-y = 0
+radius = 0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #0f0
+
+border-size = 2
+border-color = ${colors.background}
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = Source Code Pro:size=11;0
+#font-1 = Wuncon Siji:size=11;1
+;font-2 = tewi-medium-11:pixelsize:10;1
+;font-0 = fixed:pixelsize=10;1
+;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+
+modules-left = bspwm
+modules-center = xwindow
+modules-right = filesystem cpu wlan battery date 
+
+tray-position = right
+tray-padding = 2
+;tray-transparent = true
+;tray-background = #0063ff
+
+wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:60:...%
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = "k "
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-underline = ${colors.secondary}
+
+label-layout = %layout%
+label-layout-underline = ${colors.secondary}
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.secondary}
+label-indicator-underline = ${colors.secondary}
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{A1:alacritty -e ranger&:}disk: %percentage_used%%%{A}
+label-unmounted = %mountpoint% not mounted
+label-mounted-foreground = ${colors.foreground}
+
+
+[module/bspwm]
+type = internal/bspwm
+
+label-urgent-background = ${colors.alert}
+label-empty-foreground = ${colors.foreground-alt}
+enable-scroll = false
+
+label-focused-background = ${colors.background-alt}
+label-focused-foreground = ${colors.background}
+label-focused = %icon%
+#ws-icon-0 = "1;  "
+ws-icon-default = " # "
+label-occupied = " @ "
+label-empty = " - " 
+
+[module/mpd]
+type = internal/mpd
+format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
+label-song-maxlen = 25
+label-song-ellipsis = true
+
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <label> <bar>
+label = BL
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = #ff
+bar-indicator-font = 2
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = #9f78e1
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = ${colors.foreground-alt}
+
+[module/backlight-acpi]
+inherit = module/xbacklight
+type = internal/backlight
+card = intel_backlight
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "cpu: "
+label = %{A1:alacritty -e htop&:}%percentage%%%{A}
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "m "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #4bffdc
+label = %percentage_used%%
+
+[module/wlan]
+type = internal/network
+interface = wlp4s0 
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+label-connected = %essid%
+
+format-disconnected = <label-disconnected>
+#format-disconnected-underline = ${self.format-connected-underline}
+#label-disconnected = %ifname% disconnected
+#label-disconnected-foreground = ${colors.foreground-alt}
+
+format-packetloss = <animation-packetloss> <label-connected>
+animation-packetloss-0 = "  "
+animation-packetloss-0-foreground = ${colors.red}
+animation-packetloss-1 = "  "
+animation-packetloss-1-foreground = ${colors.orange}
+animation-packetloss-framerate = 500
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.purple}
+
+[module/eth]
+type = internal/network
+interface = eno1
+interval = 3.0
+
+format-connected-underline = #55aa55
+format-connected-prefix = "l "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip%
+
+format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/date]
+type = internal/date
+interval = 5
+
+date-alt = 
+date = " %d %B"
+
+time = %H:%M
+time-alt = %H:%M
+
+format-prefix = time:
+#format-prefix-foreground = ${colors.blue}
+
+label = %date% %time%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+use-ui-max = false
+
+format-volume = <ramp-volume> <label-volume> 
+label-volume = %percentage%%
+label-volume-foreground = ${root.foreground}
+ramp-volume-foreground = ${colors.blue}
+ramp-headphones-foreground = ${colors.blue}
+
+format-muted-prefix = "VOL: "
+format-muted-foreground = ${colors.foreground}
+label-muted = "--%"
+
+ramp-volume-0 = vol:
+ramp-volume-1 = VOL:
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 99
+
+format-charging = <animation-charging> <label-charging>
+
+format-discharging = <ramp-capacity> <label-discharging>
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.green}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-foreground = ${colors.orange}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-foreground = ${colors.teal}
+animation-charging-framerate = 750
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-underline = #f50a4d
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature%
+label-warn = %temperature%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = a
+ramp-1 = b
+ramp-2 = c
+ramp-foreground = ${colors.foreground-alt}
+
+[module/powermenu]
+type = custom/menu
+
+format-spacing = 1
+
+label-open = power
+label-open-foreground = ${colors.secondary}
+label-close = cancel
+label-close-foreground = ${colors.secondary}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini
